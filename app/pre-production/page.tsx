@@ -137,7 +137,7 @@ export default function ProductionPage() {
         <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
           <Link href="/" className="hover:text-emerald-400">Home</Link>
           <Link href="/about" className="hover:text-emerald-400">About</Link>
-          <Link href="/pre-production" className="hover:text-emerald-400">Pre-Pro</Link>
+          <Link href="/pre-production" className="hover:text-emerald-400">Pre-Production</Link>
           <Link href="/production" className="text-emerald-400">Production</Link>
         </div>
       </nav>
