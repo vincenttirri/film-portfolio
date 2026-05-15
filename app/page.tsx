@@ -1,6 +1,6 @@
 'use client';
 
-export default function HomePage(): JSX.Element {
+export default function HomePage() {
   return (
     <div className="h-screen bg-black text-white font-sans overflow-hidden relative">
 

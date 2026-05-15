@@ -9,7 +9,7 @@ type Asset = {
   type: 'pdf' | 'image';
 };
 
-export default function PreProductionPage(): JSX.Element {
+export default function PreProductionPage() {
   const [activeFile, setActiveFile] = useState<Asset | null>(null);
 
   // ================= PITCHES =================

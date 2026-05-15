@@ -1,6 +1,6 @@
 'use client';
 
-export default function AboutPage(): JSX.Element {
+export default function AboutPage() {
   return (
     <div className="min-h-screen bg-black text-white font-sans relative overflow-hidden">
 
