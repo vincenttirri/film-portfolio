@@ -1,7 +1,12 @@
 'use client';
 
-export default function HomePage() {
+export default function Home() {
   return (
+    <div style={{ color: "white", background: "black", height: "100vh" }}>
+      <h1>Home Page Working</h1>
+    </div>
+  );
+}
     <div className="h-screen bg-black text-white font-sans overflow-hidden relative">
 
       {/* BACKGROUND */}
