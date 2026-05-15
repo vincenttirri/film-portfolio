@@ -1,11 +1,11 @@
 'use client';
 
 export default function Home() {
-  return (
+  return <h1>Home</h1>;
     <div style={{ color: "white", background: "black", height: "100vh" }}>
       <h1>Home Page Working</h1>
     </div>
-  );
+;
 }
     <div className="h-screen bg-black text-white font-sans overflow-hidden relative">
 
@@ -92,5 +92,3 @@ export default function Home() {
 
       </div>
     </div>
-  );
-}
