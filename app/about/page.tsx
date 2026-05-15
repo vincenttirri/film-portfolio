@@ -35,7 +35,7 @@ export default function AboutPage() {
               Pre-Production
             </a>
 
-            <a href="/production" className="hover:text-emerald-400 transition">
+            <a href="/Production" className="hover:text-emerald-400 transition">
               Production
             </a>
           </div>
