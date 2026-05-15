@@ -1,216 +1,225 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 
-type Project = {
+type Asset = {
   title: string;
-  slug: string;
-  type: 'short' | 'music' | 'doc' | 'commercial' | 'audio';
+  file: string;
   thumb: string;
-  video: string;
-  logline: string;
-  role: string;
+  type: 'pdf' | 'image';
 };
 
-export default function ProductionPage() {
-  const [activeVideo, setActiveVideo] = useState<Project | null>(null);
+export default function PreProductionPage() {
+  const [activeFile, setActiveFile] = useState<Asset | null>(null);
 
-  const [index, setIndex] = useState(0);
-
-  const projects: Project[] = [
+  // ================= PITCHES =================
+  const pitches: Asset[] = [
     {
-      title: "FEATURED SHORT FILM",
-      slug: "featured-short-film",
-      type: "short",
-      thumb: "/short1.jpg",
-      video: "https://www.youtube.com/embed/xxxx",
-      logline: "A filmmaker struggles to distinguish reality from fiction.",
-      role: "Director / Editor"
+      title: "Everything Above",
+      file: "Everything Above.pdf",
+      thumb: "Everything Above Thumb.jpg",
+      type: "pdf"
     },
     {
-      title: "Short Film 2",
-      slug: "short-film-2",
-      type: "short",
-      thumb: "/short2.jpg",
-      video: "https://www.youtube.com/embed/xxxx",
-      logline: "TBD",
-      role: "Director"
-    },
-
-    {
-      title: "Music Video 1",
-      slug: "music-video-1",
-      type: "music",
-      thumb: "/music1.jpg",
-      video: "https://www.youtube.com/embed/xxxx",
-      logline: "Emotional visual soundscape.",
-      role: "Director"
+      title: "RADIOWORLD",
+      file: "RADIOWORLD.pdf",
+      thumb: "RADIOWORLD Thumb.jpg",
+      type: "pdf"
     },
     {
-      title: "Music Video 2",
-      slug: "music-video-2",
-      type: "music",
-      thumb: "/music2.jpg",
-      video: "https://www.youtube.com/embed/xxxx",
-      logline: "TBD",
-      role: "Director"
-    },
-
-    {
-      title: "Documentary 1",
-      slug: "doc-1",
-      type: "doc",
-      thumb: "/doc1.jpg",
-      video: "https://www.youtube.com/embed/xxxx",
-      logline: "Real-world observational storytelling.",
-      role: "Director / Camera"
+      title: "The Sanctuary for All",
+      file: "The Sanctuary for All.pdf",
+      thumb: "Sanctuary Thumb.jpg",
+      type: "pdf"
     },
     {
-      title: "Documentary 2",
-      slug: "doc-2",
-      type: "doc",
-      thumb: "/doc2.jpg",
-      video: "https://www.youtube.com/embed/xxxx",
-      logline: "TBD",
-      role: "Camera"
+      title: "Once in time, Now in space",
+      file: "Once in time, Now in space.pdf",
+      thumb: "Nasa Hunch Thumb.jpg",
+      type: "pdf"
     },
-    {
-      title: "Documentary 3",
-      slug: "doc-3",
-      type: "doc",
-      thumb: "/doc3.jpg",
-      video: "https://www.youtube.com/embed/xxxx",
-      logline: "TBD",
-      role: "Editor"
-    },
-
-    {
-      title: "Commercial Project",
-      slug: "commercial",
-      type: "commercial",
-      thumb: "/commercial.jpg",
-      video: "https://www.youtube.com/embed/xxxx",
-      logline: "Brand storytelling piece.",
-      role: "Director / Editor"
-    },
-
-    {
-      title: "Audio Editing Project",
-      slug: "audio-project",
-      type: "audio",
-      thumb: "/audio.jpg",
-      video: "https://www.youtube.com/embed/xxxx",
-      logline: "Sound design narrative composition.",
-      role: "Sound Editor"
-    }
   ];
 
-  // ================= CAROUSEL LOGIC =================
-  const visibleCount = 4;
-
-  const next = () => {
-    setIndex((prev) => (prev + 1) % projects.length);
-  };
-
-  const prev = () => {
-    setIndex((prev) => (prev - 1 + projects.length) % projects.length);
-  };
-
-  const getVisible = () => {
-    let result = [];
-    for (let i = 0; i < visibleCount; i++) {
-      result.push(projects[(index + i) % projects.length]);
-    }
-    return result;
-  };
+  // ================= SCRIPTS =================
+  const scripts: Asset[] = [
+    {
+      title: "Everything Above",
+      file: "Everything Above Script.pdf",
+      thumb: "Everything Above Script_page-0001.jpg",
+      type: "pdf"
+    },
+    {
+      title: "RADIOWORLD",
+      file: "RADIOWORLD SCRIPT.pdf",
+      thumb: "RS Thumb_page-0001.jpg",
+      type: "pdf"
+    },
+    {
+      title: "The Sanctuary for All",
+      file: "Sanctuary script.pdf",
+      thumb: "Sanctuary script_page-0001.jpg",
+      type: "pdf"
+    },
+    {
+      title: "Once in time, Now in space",
+      file: "Nasa script.pdf",
+      thumb: "Nasa script_page-0001.jpg",
+      type: "pdf"
+    },
+    {
+      title: "In⏺Congruity",
+      file: "IC Script.pdf",
+      thumb: "ICS Thumb_page-0001.jpg",
+      type: "pdf"
+    },
+  ];
 
   return (
-    <main className="min-h-screen bg-black text-white font-sans">
+    <div className="min-h-screen bg-black text-white font-sans relative overflow-hidden">
 
-      {/* NAV (FIXED) */}
-      <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10">
-        <h1 className="tracking-[0.35em] text-sm text-gray-300">
-          PRODUCTION ARCHIVE
-        </h1>
+      {/* CINEMATIC BACKGROUND */}
+      <div className="fixed inset-0 bg-black" />
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.10),transparent_60%)] pointer-events-none" />
+      <div className="fixed inset-0 opacity-[0.05] bg-[url('https://www.transparenttextures.com/patterns/noise.png')]" />
 
-        <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
-          <Link href="/" className="hover:text-emerald-400">Home</Link>
-          <Link href="/about" className="hover:text-emerald-400">About</Link>
-          <Link href="/pre-production" className="hover:text-emerald-400">Pre-Production</Link>
-          <Link href="/production" className="text-emerald-400">Production</Link>
-        </div>
-      </nav>
+      <div className="relative z-10">
 
-      {/* HEADER */}
-      <section className="px-8 py-10 max-w-6xl mx-auto">
-        <h1 className="text-5xl font-light">Production Archive</h1>
-        <p className="text-gray-400 mt-3">
-          Short Films, Music Videos, Documentaries, Commercials, and Audio Work.
-        </p>
-      </section>
+        {/* NAV */}
+        <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10">
+          <h1 className="tracking-[0.35em] text-sm text-gray-300">
+            PRODUCTION ARCHIVE
+          </h1>
 
-      {/* CAROUSEL */}
-      <section className="px-8 pb-20 max-w-6xl mx-auto">
+          <div className="flex gap-8 text-sm tracking-widest uppercase text-gray-400">
+            <a href="/" className="hover:text-emerald-400">Home</a>
+            <a href="/about" className="hover:text-emerald-400">About</a>
+            <a href="/pre-production" className="text-emerald-400">Pre-Production</a>
+            <a href="/Production" className="hover:text-emerald-400">Production</a>
+          </div>
+        </nav>
 
-        <div className="flex items-center justify-between mb-4">
+        {/* HEADER */}
+        <section className="px-8 py-12 max-w-6xl mx-auto">
+          <p className="text-xs tracking-[0.4em] text-gray-500 uppercase">
+            Studio Archive System
+          </p>
 
-          <button onClick={prev} className="text-2xl text-gray-400 hover:text-emerald-400">
-            ←
-          </button>
+          <h1 className="text-5xl font-light mt-3">
+            Pre-Production Dossier
+          </h1>
 
-          <button onClick={next} className="text-2xl text-gray-400 hover:text-emerald-400">
-            →
-          </button>
+          <p className="text-gray-400 mt-5 max-w-2xl">
+            Structured archive of pitch decks, scripts, and development documents used in production workflows.
+          </p>
+        </section>
 
-        </div>
+        {/* GRID */}
+        <section className="px-8 pb-20 max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
 
-        <div className="grid grid-cols-4 gap-4">
+          {/* ================= PITCHES (UNCHANGED) ================= */}
+          <div className="border border-white/10 p-6">
 
-          {getVisible().map((p) => (
-            <div
-              key={p.slug}
-              onClick={() => setActiveVideo(p)}
-              className="border border-white/10 hover:border-emerald-400 transition cursor-pointer"
-            >
+            <div className="mb-5">
+              <h2 className="text-2xl font-light">Pitch Decks</h2>
+            </div>
 
-              <div className="h-[320px] overflow-hidden">
-                <img
-                  src={p.thumb}
-                  className="w-full h-full object-cover hover:scale-105 transition"
-                />
-              </div>
+            <div className="flex gap-4 overflow-x-auto pb-3">
 
-              <div className="p-3">
-                <p className="text-sm capitalize">{p.type.replace('_', ' ')}</p>
-                <p className="text-xs text-gray-400">{p.role}</p>
-              </div>
+              {pitches.map((item) => (
+                <div
+                  key={item.title}
+                  onClick={() => setActiveFile(item)}
+                  className="min-w-[280px] cursor-pointer border border-white/10 hover:border-emerald-400/50 transition"
+                >
+                  <img
+                    src={item.thumb}
+                    className="h-[200px] w-full object-cover"
+                    alt={item.title}
+                  />
+
+                  <div className="p-3">
+                    <p className="text-sm">{item.title}</p>
+                    <p className="text-xs text-gray-500">Pitch Document</p>
+                  </div>
+                </div>
+              ))}
 
             </div>
-          ))}
-
-        </div>
-
-      </section>
-
-      {/* MODAL PLAYER */}
-      {activeVideo && (
-        <div
-          onClick={() => setActiveVideo(null)}
-          className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-10"
-        >
-          <div className="w-full max-w-5xl h-[80vh]">
-
-            <iframe
-              src={activeVideo.video}
-              className="w-full h-full"
-              allowFullScreen
-            />
 
           </div>
-        </div>
-      )}
 
-    </main>
+          {/* ================= SCRIPTS ================= */}
+<div className="border border-white/10 p-6">
+
+  <div className="mb-5">
+    <h2 className="text-2xl font-light">Scripts</h2>
+  </div>
+
+  {/* HORIZONTAL SCROLL (PORTRAIT CARDS) */}
+  <div className="flex gap-4 overflow-x-auto pb-3">
+
+    {scripts.map((item) => (
+      <div
+        key={item.title}
+        onClick={() => setActiveFile(item)}
+        className="min-w-[220px] cursor-pointer border border-white/10 hover:border-emerald-400/50 transition bg-black/40"
+      >
+
+        {/* PORTRAIT THUMBNAIL */}
+        <div className="h-[320px] w-full bg-black overflow-hidden">
+          <img
+            src={item.thumb}
+            alt={item.title}
+            className="w-full h-full object-contain hover:scale-105 transition duration-500"
+            loading="lazy"
+          />
+        </div>
+
+        {/* TEXT */}
+        <div className="p-3">
+          <p className="text-sm">{item.title}</p>
+          <p className="text-xs text-gray-500">Screenplay</p>
+        </div>
+
+      </div>
+    ))}
+
+  </div>
+
+</div>
+
+        </section>
+
+        {/* FULLSCREEN VIEWER */}
+        {activeFile && (
+          <div
+            onClick={() => setActiveFile(null)}
+            className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-10"
+          >
+            <div className="w-full max-w-5xl h-[90vh] border border-white/20 bg-black">
+
+              {activeFile.type === 'pdf' ? (
+                <iframe
+                  src={activeFile.file}
+                  className="w-full h-full"
+                />
+              ) : (
+                <img
+                  src={activeFile.file}
+                  className="w-full h-full object-contain"
+                />
+              )}
+
+            </div>
+          </div>
+        )}
+
+        {/* FOOTER */}
+        <footer className="text-center text-[10px] tracking-[0.3em] text-gray-600 py-6 border-t border-white/10">
+          PRODUCTION ARCHIVE SYSTEM
+        </footer>
+
+      </div>
+    </div>
   );
 }
