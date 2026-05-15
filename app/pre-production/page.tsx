@@ -155,18 +155,18 @@ export default function PreProductionPage() {
     <h2 className="text-2xl font-light">Scripts</h2>
   </div>
 
-  {/* VERTICAL SCROLL ARCHIVE */}
-  <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2">
+  {/* HORIZONTAL SCROLL (PORTRAIT CARDS) */}
+  <div className="flex gap-4 overflow-x-auto pb-3">
 
     {scripts.map((item) => (
       <div
         key={item.title}
         onClick={() => setActiveFile(item)}
-        className="flex gap-4 cursor-pointer border border-white/10 hover:border-emerald-400/50 transition bg-black/40 p-3"
+        className="min-w-[220px] cursor-pointer border border-white/10 hover:border-emerald-400/50 transition bg-black/40"
       >
 
-        {/* THUMBNAIL */}
-        <div className="w-[120px] h-[170px] flex-shrink-0 bg-black overflow-hidden border border-white/10">
+        {/* PORTRAIT THUMBNAIL */}
+        <div className="h-[320px] w-full bg-black overflow-hidden">
           <img
             src={item.thumb}
             alt={item.title}
@@ -175,10 +175,10 @@ export default function PreProductionPage() {
           />
         </div>
 
-        {/* INFO */}
-        <div className="flex flex-col justify-center">
+        {/* TEXT */}
+        <div className="p-3">
           <p className="text-sm">{item.title}</p>
-          <p className="text-xs text-gray-500 mt-1">Screenplay</p>
+          <p className="text-xs text-gray-500">Screenplay</p>
         </div>
 
       </div>
