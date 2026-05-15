@@ -8,9 +8,9 @@ export default function HomePage() {
       <div className="fixed inset-0 bg-black" />
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.12),transparent_60%)] pointer-events-none" />
       <div className="fixed inset-0 pointer-events-none shadow-[inset_0_0_180px_rgba(0,0,0,0.95)]" />
-      <div className="fixed inset-0 pointer-events-none opacity-[0.07] animate-grain bg-[url('https://www.transparenttextures.com/patterns/noise.png')]" />
+      <div className="fixed inset-0 pointer-events-none opacity-[0.07] bg-[url('https://www.transparenttextures.com/patterns/noise.png')]" />
 
-      <div className="relative z-10 flex flex-col h-full">
+      <div className="relative z-10 flex flex-col min-h-screen">
 
         {/* NAV */}
         <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10">
@@ -27,9 +27,9 @@ export default function HomePage() {
         </nav>
 
         {/* MAIN */}
-        <main className="flex-1 flex items-center px-6">
+        <section className="flex-1 flex items-center px-6">
 
-          <div className="w-full max-w-6xl mx-auto grid grid-cols-2 gap-12 items-center">
+          <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
             {/* LEFT */}
             <div className="space-y-6">
@@ -38,9 +38,8 @@ export default function HomePage() {
                 Film Portfolio 2027
               </p>
 
-              <h1 className="text-6xl font-light leading-tight">
-                Aspiring <span className="text-emerald-400">Director</span> &
-                Cinematic Storyteller
+              <h1 className="text-5xl md:text-6xl font-light leading-tight">
+                Aspiring <span className="text-emerald-400">Director</span> & Cinematic Storyteller
               </h1>
 
               <p className="text-lg text-gray-400 leading-relaxed">
@@ -55,8 +54,8 @@ export default function HomePage() {
 
               <img
                 src="/vincent-portrait.jpg"
-                alt="Portrait"
-                className="h-[560px] w-full max-w-md object-contain"
+                alt="Portrait of Vincent Tirri"
+                className="h-[560px] w-full max-w-md object-cover border border-white/10"
               />
 
               {/* EMAIL */}
@@ -64,12 +63,16 @@ export default function HomePage() {
                 <p className="text-xs tracking-[0.3em] text-gray-500 uppercase">
                   Contact
                 </p>
-                <p className="text-emerald-400 text-xl mt-1 font-medium">
+
+                <a
+                  href="mailto:vincetirri@gmail.com"
+                  className="text-emerald-400 text-xl mt-1 font-medium hover:underline"
+                >
                   vincetirri@gmail.com
-                </p>
+                </a>
               </div>
 
-              {/* QUOTE */}
+              {/* QUOTE (YOUR EXACT TEXT) */}
               <p className="text-sm italic text-gray-400 border-l border-emerald-400 pl-4 text-center">
                 “This website is where you will find details about my experiences from the Video Production Program at PCTI.”
               </p>
@@ -78,7 +81,7 @@ export default function HomePage() {
 
           </div>
 
-        </main>
+        </section>
 
         {/* FOOTER */}
         <footer className="text-center text-[10px] tracking-[0.3em] text-gray-600 py-5 border-t border-white/10">
@@ -86,3 +89,7 @@ export default function HomePage() {
         </footer>
 
       </div>
+
+    </main>
+  );
+}
