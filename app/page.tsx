@@ -55,7 +55,7 @@ export default function HomePage() {
               <img
                 src="/vincent-portrait.jpg"
                 alt="Portrait of Vincent Tirri"
-                className="h-[560px] w-full max-w-md object-cover border border-white/10"
+                className="h-[560px] w-full max-w-md object-cover object-top border border-white/10"
               />
 
               {/* EMAIL */}
