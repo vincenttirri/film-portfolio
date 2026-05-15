@@ -1,13 +1,8 @@
 'use client';
 
-export default function Home() {
-  return <h1>Home</h1>;
-    <div style={{ color: "white", background: "black", height: "100vh" }}>
-      <h1>Home Page Working</h1>
-    </div>
-;
-}
-    <div className="h-screen bg-black text-white font-sans overflow-hidden relative">
+export default function HomePage() {
+  return (
+    <main className="relative min-h-screen overflow-hidden bg-black text-white">
 
       {/* BACKGROUND */}
       <div className="fixed inset-0 bg-black" />
@@ -91,4 +86,3 @@ export default function Home() {
         </footer>
 
       </div>
-    </div>
