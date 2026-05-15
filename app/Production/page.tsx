@@ -13,6 +13,91 @@ type Project = {
   featured?: boolean;
 };
 
+const projects: Project[] = [
+  {
+    title: "FEATURED SHORT FILM",
+    slug: "featured-short-film",
+    type: "short",
+    thumb: "/short1.jpg",
+    video: "https://www.youtube.com/embed/xxxx",
+    logline: "A filmmaker struggles to distinguish reality from fiction.",
+    role: "Director / Editor",
+    featured: true
+  },
+  {
+    title: "Short Film 2",
+    slug: "short-2",
+    type: "short",
+    thumb: "/short2.jpg",
+    video: "https://www.youtube.com/embed/xxxx",
+    logline: "TBD",
+    role: "Director"
+  },
+  {
+    title: "Music Video 1",
+    slug: "music-1",
+    type: "music",
+    thumb: "/music1.jpg",
+    video: "https://www.youtube.com/embed/xxxx",
+    logline: "Emotional visual storytelling.",
+    role: "Director"
+  },
+  {
+    title: "Music Video 2",
+    slug: "music-2",
+    type: "music",
+    thumb: "/music2.jpg",
+    video: "https://www.youtube.com/embed/xxxx",
+    logline: "TBD",
+    role: "Director"
+  },
+  {
+    title: "Documentary 1",
+    slug: "doc-1",
+    type: "doc",
+    thumb: "/doc1.jpg",
+    video: "https://www.youtube.com/embed/xxxx",
+    logline: "Observational storytelling.",
+    role: "Director / Camera"
+  },
+  {
+    title: "Documentary 2",
+    slug: "doc-2",
+    type: "doc",
+    thumb: "/doc2.jpg",
+    video: "https://www.youtube.com/embed/xxxx",
+    logline: "TBD",
+    role: "Camera"
+  },
+  {
+    title: "Documentary 3",
+    slug: "doc-3",
+    type: "doc",
+    thumb: "/doc3.jpg",
+    video: "https://www.youtube.com/embed/xxxx",
+    logline: "TBD",
+    role: "Editor"
+  },
+  {
+    title: "Commercial Project",
+    slug: "commercial",
+    type: "commercial",
+    thumb: "/commercial.jpg",
+    video: "https://www.youtube.com/embed/xxxx",
+    logline: "Brand storytelling.",
+    role: "Director / Editor"
+  },
+  {
+    title: "Audio Editing Project",
+    slug: "audio",
+    type: "audio",
+    thumb: "/audio.jpg",
+    video: "https://www.youtube.com/embed/xxxx",
+    logline: "Sound design narrative work.",
+    role: "Sound Editor"
+  }
+];
+
 export default function ProductionPage() {
   const [activeVideo, setActiveVideo] = useState<Project | null>(null);
 
@@ -23,99 +108,6 @@ export default function ProductionPage() {
     commercial: 0,
     audio: 0
   });
-
-  const projects: Project[] = [
-    {
-      title: "FEATURED SHORT FILM",
-      slug: "featured-short-film",
-      type: "short",
-      thumb: "/short1.jpg",
-      video: "https://www.youtube.com/embed/xxxx",
-      logline: "A filmmaker struggles to distinguish reality from fiction.",
-      role: "Director / Editor",
-      featured: true
-    },
-
-    {
-      title: "Short Film 2",
-      slug: "short-2",
-      type: "short",
-      thumb: "/short2.jpg",
-      video: "https://www.youtube.com/embed/xxxx",
-      logline: "TBD",
-      role: "Director"
-    },
-
-    {
-      title: "Music Video 1",
-      slug: "music-1",
-      type: "music",
-      thumb: "/music1.jpg",
-      video: "https://www.youtube.com/embed/xxxx",
-      logline: "Emotional visual storytelling.",
-      role: "Director"
-    },
-
-    {
-      title: "Music Video 2",
-      slug: "music-2",
-      type: "music",
-      thumb: "/music2.jpg",
-      video: "https://www.youtube.com/embed/xxxx",
-      logline: "TBD",
-      role: "Director"
-    },
-
-    {
-      title: "Documentary 1",
-      slug: "doc-1",
-      type: "doc",
-      thumb: "/doc1.jpg",
-      video: "https://www.youtube.com/embed/xxxx",
-      logline: "Observational storytelling.",
-      role: "Director / Camera"
-    },
-
-    {
-      title: "Documentary 2",
-      slug: "doc-2",
-      type: "doc",
-      thumb: "/doc2.jpg",
-      video: "https://www.youtube.com/embed/xxxx",
-      logline: "TBD",
-      role: "Camera"
-    },
-
-    {
-      title: "Documentary 3",
-      slug: "doc-3",
-      type: "doc",
-      thumb: "/doc3.jpg",
-      video: "https://www.youtube.com/embed/xxxx",
-      logline: "TBD",
-      role: "Editor"
-    },
-
-    {
-      title: "Commercial Project",
-      slug: "commercial",
-      type: "commercial",
-      thumb: "/commercial.jpg",
-      video: "https://www.youtube.com/embed/xxxx",
-      logline: "Brand storytelling.",
-      role: "Director / Editor"
-    },
-
-    {
-      title: "Audio Editing Project",
-      slug: "audio",
-      type: "audio",
-      thumb: "/audio.jpg",
-      video: "https://www.youtube.com/embed/xxxx",
-      logline: "Sound design narrative work.",
-      role: "Sound Editor"
-    }
-  ];
 
   const getByType = (type: Project['type']) =>
     projects.filter(p => p.type === type);
@@ -163,18 +155,18 @@ export default function ProductionPage() {
         </h1>
 
         <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
-          <a href="/" className="hover:text-emerald-400">HOME</a>
-          <a href="/about" className="hover:text-emerald-400">ABOUT</a>
-          <a href="/pre-production" className="hover:text-emerald-400">PRE-PRODUCTION</a>
+          <a href="/">HOME</a>
+          <a href="/about">ABOUT</a>
+          <a href="/pre-production">PRE-PRODUCTION</a>
           <a href="/production" className="text-emerald-400">PRODUCTION</a>
         </div>
       </nav>
 
-      {/* FEATURED FILM */}
+      {/* FEATURED */}
       {featured && (
-        <section className="px-8 py-10 max-w-6xl mx-auto">
+        <section className="px-8 py-10 max-w-6xl mx-auto relative z-10">
 
-          <p className="text-xs tracking-[0.4em] text-emerald-400 uppercase">
+          <p className="text-emerald-400 text-xs tracking-[0.4em] uppercase">
             Featured Film
           </p>
 
@@ -184,10 +176,6 @@ export default function ProductionPage() {
 
           <p className="text-gray-400 mt-3 max-w-2xl">
             {featured.logline}
-          </p>
-
-          <p className="text-xs text-gray-500 mt-2">
-            Role: {featured.role}
           </p>
 
           <div className="mt-6 aspect-video border border-white/10">
@@ -201,13 +189,12 @@ export default function ProductionPage() {
         </section>
       )}
 
-      {/* ================= SECTIONS ================= */}
-
-      <Section title="Short Films" type="short" />
-      <Section title="Music Videos" type="music" />
-      <Section title="Documentaries" type="doc" />
-      <Section title="Commercial" type="commercial" />
-      <Section title="Audio Editing" type="audio" />
+      {/* SECTIONS */}
+      {renderSection("Short Films", "short")}
+      {renderSection("Music Videos", "music")}
+      {renderSection("Documentaries", "doc")}
+      {renderSection("Commercial", "commercial")}
+      {renderSection("Audio Editing", "audio")}
 
       {/* MODAL */}
       {activeVideo && (
@@ -228,22 +215,18 @@ export default function ProductionPage() {
     </main>
   );
 
-  function Section({ title, type }: { title: string; type: Project['type'] }) {
+  function renderSection(title: string, type: Project['type']) {
     const list = getByType(type);
 
     return (
-      <section className="px-8 pb-16 max-w-6xl mx-auto">
+      <section className="px-8 pb-16 max-w-6xl mx-auto relative z-10">
 
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-2xl font-light">{title}</h2>
 
           <div className="flex gap-4 text-2xl text-gray-400">
-            <button onClick={() => prev(type)} className="hover:text-emerald-400">
-              ←
-            </button>
-            <button onClick={() => next(type)} className="hover:text-emerald-400">
-              →
-            </button>
+            <button onClick={() => prev(type)}>←</button>
+            <button onClick={() => next(type)}>→</button>
           </div>
         </div>
 
@@ -253,13 +236,13 @@ export default function ProductionPage() {
             <div
               key={p.slug}
               onClick={() => setActiveVideo(p)}
-              className="border border-white/10 hover:border-emerald-400 transition cursor-pointer"
+              className="border border-white/10 hover:border-emerald-400 cursor-pointer"
             >
 
               <div className="h-[300px] overflow-hidden">
                 <img
                   src={p.thumb}
-                  className="w-full h-full object-cover hover:scale-105 transition"
+                  className="w-full h-full object-cover"
                 />
               </div>
 
@@ -272,6 +255,7 @@ export default function ProductionPage() {
           ))}
 
         </div>
+
       </section>
     );
   }
