@@ -54,19 +54,19 @@ export default function PreProductionPage() {
       thumb: "RS Thumb_page-0001.jpg",
       type: "pdf"
     },
-     {
+    {
       title: "The Sanctuary for All",
       file: "Sanctuary script.pdf",
       thumb: "Sanctuary script_page-0001.jpg",
       type: "pdf"
     },
-     {
+    {
       title: "Once in time, Now in space",
       file: "Nasa script.pdf",
       thumb: "Nasa script_page-0001.jpg",
       type: "pdf"
     },
-     {
+    {
       title: "In⏺Congruity",
       file: "IC Script.pdf",
       thumb: "ICS Thumb_page-0001.jpg",
@@ -116,13 +116,10 @@ export default function PreProductionPage() {
         {/* GRID */}
         <section className="px-8 pb-20 max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
 
-          {/* ================= PITCHES ================= */}
+          {/* ================= PITCHES (UNCHANGED) ================= */}
           <div className="border border-white/10 p-6">
 
             <div className="mb-5">
-              <p className="text-xs tracking-[0.3em] text-emerald-400 uppercase">
-                
-              </p>
               <h2 className="text-2xl font-light">Pitch Decks</h2>
             </div>
 
@@ -151,34 +148,38 @@ export default function PreProductionPage() {
 
           </div>
 
-          {/* ================= SCRIPTS ================= */}
+          {/* ================= SCRIPTS (UPGRADED VERTICAL SYSTEM) ================= */}
           <div className="border border-white/10 p-6">
 
             <div className="mb-5">
-              <p className="text-xs tracking-[0.3em] text-emerald-400 uppercase">
-                
-              </p>
               <h2 className="text-2xl font-light">Scripts</h2>
             </div>
 
-            <div className="flex gap-4 overflow-x-auto pb-3">
+            {/* VERTICAL ARCHIVE GRID */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
               {scripts.map((item) => (
                 <div
                   key={item.title}
                   onClick={() => setActiveFile(item)}
-                  className="min-w-[280px] cursor-pointer border border-white/10 hover:border-emerald-400/50 transition"
+                  className="cursor-pointer border border-white/10 hover:border-emerald-400/50 transition bg-black/40"
                 >
-                  <img
-                    src={item.thumb}
-                    className="h-[200px] w-full object-cover"
-                    alt={item.title}
-                  />
 
-                  <div className="p-3">
+                  {/* HIGHER QUALITY IMAGE DISPLAY */}
+                  <div className="h-[360px] w-full bg-black overflow-hidden">
+                    <img
+                      src={item.thumb}
+                      alt={item.title}
+                      className="w-full h-full object-contain hover:scale-105 transition duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div className="p-4">
                     <p className="text-sm">{item.title}</p>
                     <p className="text-xs text-gray-500">Screenplay</p>
                   </div>
+
                 </div>
               ))}
 
