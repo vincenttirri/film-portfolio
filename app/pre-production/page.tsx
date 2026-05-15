@@ -148,44 +148,45 @@ export default function PreProductionPage() {
 
           </div>
 
-          {/* ================= SCRIPTS (UPGRADED VERTICAL SYSTEM) ================= */}
-          <div className="border border-white/10 p-6">
+          {/* ================= SCRIPTS ================= */}
+<div className="border border-white/10 p-6">
 
-            <div className="mb-5">
-              <h2 className="text-2xl font-light">Scripts</h2>
-            </div>
+  <div className="mb-5">
+    <h2 className="text-2xl font-light">Scripts</h2>
+  </div>
 
-            {/* VERTICAL ARCHIVE GRID */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+  {/* VERTICAL SCROLL ARCHIVE */}
+  <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2">
 
-              {scripts.map((item) => (
-                <div
-                  key={item.title}
-                  onClick={() => setActiveFile(item)}
-                  className="cursor-pointer border border-white/10 hover:border-emerald-400/50 transition bg-black/40"
-                >
+    {scripts.map((item) => (
+      <div
+        key={item.title}
+        onClick={() => setActiveFile(item)}
+        className="flex gap-4 cursor-pointer border border-white/10 hover:border-emerald-400/50 transition bg-black/40 p-3"
+      >
 
-                  {/* HIGHER QUALITY IMAGE DISPLAY */}
-                  <div className="h-[360px] w-full bg-black overflow-hidden">
-                    <img
-                      src={item.thumb}
-                      alt={item.title}
-                      className="w-full h-full object-contain hover:scale-105 transition duration-500"
-                      loading="lazy"
-                    />
-                  </div>
+        {/* THUMBNAIL */}
+        <div className="w-[120px] h-[170px] flex-shrink-0 bg-black overflow-hidden border border-white/10">
+          <img
+            src={item.thumb}
+            alt={item.title}
+            className="w-full h-full object-contain hover:scale-105 transition duration-500"
+            loading="lazy"
+          />
+        </div>
 
-                  <div className="p-4">
-                    <p className="text-sm">{item.title}</p>
-                    <p className="text-xs text-gray-500">Screenplay</p>
-                  </div>
+        {/* INFO */}
+        <div className="flex flex-col justify-center">
+          <p className="text-sm">{item.title}</p>
+          <p className="text-xs text-gray-500 mt-1">Screenplay</p>
+        </div>
 
-                </div>
-              ))}
+      </div>
+    ))}
 
-            </div>
+  </div>
 
-          </div>
+</div>
 
         </section>
 
