@@ -1,21 +1,21 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 
 type Project = {
   title: string;
   slug: string;
   type: 'short' | 'music' | 'doc' | 'commercial' | 'audio';
   thumb: string;
-  video?: string;
+  video: string;
   logline: string;
   role: string;
   featured?: boolean;
 };
 
 export default function ProductionPage() {
-  const [filter, setFilter] = useState('all');
+  const [activeVideo, setActiveVideo] = useState<Project | null>(null);
+  const [index, setIndex] = useState(0);
 
   const projects: Project[] = [
     {
@@ -24,154 +24,204 @@ export default function ProductionPage() {
       type: "short",
       thumb: "/short1.jpg",
       video: "https://www.youtube.com/embed/xxxx",
-      logline: "A filmmaker struggles to distinguish reality from the stories he creates.",
+      logline: "A filmmaker struggles to distinguish reality from fiction.",
       role: "Director / Editor",
       featured: true
     },
+    {
+      title: "Short Film 2",
+      slug: "short-film-2",
+      type: "short",
+      thumb: "/short2.jpg",
+      video: "https://www.youtube.com/embed/xxxx",
+      logline: "TBD",
+      role: "Director"
+    },
+
     {
       title: "Music Video 1",
       slug: "music-video-1",
       type: "music",
       thumb: "/music1.jpg",
       video: "https://www.youtube.com/embed/xxxx",
-      logline: "Visual interpretation of sound and emotion.",
+      logline: "Emotional visual storytelling.",
       role: "Director"
     },
+    {
+      title: "Music Video 2",
+      slug: "music-video-2",
+      type: "music",
+      thumb: "/music2.jpg",
+      video: "https://www.youtube.com/embed/xxxx",
+      logline: "TBD",
+      role: "Director"
+    },
+
     {
       title: "Documentary 1",
       slug: "doc-1",
       type: "doc",
       thumb: "/doc1.jpg",
       video: "https://www.youtube.com/embed/xxxx",
-      logline: "Observational storytelling of real subjects.",
+      logline: "Observational real-world storytelling.",
       role: "Director / Camera"
+    },
+    {
+      title: "Documentary 2",
+      slug: "doc-2",
+      type: "doc",
+      thumb: "/doc2.jpg",
+      video: "https://www.youtube.com/embed/xxxx",
+      logline: "TBD",
+      role: "Camera"
+    },
+    {
+      title: "Documentary 3",
+      slug: "doc-3",
+      type: "doc",
+      thumb: "/doc3.jpg",
+      video: "https://www.youtube.com/embed/xxxx",
+      logline: "TBD",
+      role: "Editor"
+    },
+
+    {
+      title: "Commercial Project",
+      slug: "commercial",
+      type: "commercial",
+      thumb: "/commercial.jpg",
+      video: "https://www.youtube.com/embed/xxxx",
+      logline: "Brand storytelling piece.",
+      role: "Director / Editor"
+    },
+
+    {
+      title: "Audio Editing Project",
+      slug: "audio-project",
+      type: "audio",
+      thumb: "/audio.jpg",
+      video: "https://www.youtube.com/embed/xxxx",
+      logline: "Sound design narrative composition.",
+      role: "Sound Editor"
     }
   ];
 
+  const visibleCount = 4;
+
+  const next = () => {
+    setIndex((prev) => (prev + 1) % projects.length);
+  };
+
+  const prev = () => {
+    setIndex((prev) => (prev - 1 + projects.length) % projects.length);
+  };
+
+  const getVisible = () => {
+    return Array.from({ length: visibleCount }).map(
+      (_, i) => projects[(index + i) % projects.length]
+    );
+  };
+
   const featured = projects.find(p => p.featured);
 
-  const filtered =
-    filter === 'all'
-      ? projects
-      : projects.filter(p => p.type === filter);
-
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-black text-white font-sans relative overflow-hidden">
 
-      {/* BACKGROUND */}
+      {/* KEEP YOUR BACKGROUND STYLE */}
       <div className="fixed inset-0 bg-black" />
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.10),transparent_60%)] pointer-events-none" />
 
       <div className="relative z-10">
 
-        {/* NAV */}
+        {/* NAV (UPDATED TEXT ONLY) */}
         <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10">
           <h1 className="tracking-[0.35em] text-sm text-gray-300">
             PRODUCTION ARCHIVE
           </h1>
 
           <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
-            <Link href="/" className="hover:text-emerald-400">Home</Link>
-            <Link href="/about" className="hover:text-emerald-400">About</Link>
-            <Link href="/pre-production" className="hover:text-emerald-400">Pre</Link>
-            <Link href="/production" className="text-emerald-400">Production</Link>
+            <a href="/" className="hover:text-emerald-400">HOME</a>
+            <a href="/about" className="hover:text-emerald-400">ABOUT</a>
+            <a href="/pre-production" className="hover:text-emerald-400">PRE-PRODUCTION</a>
+            <a href="/production" className="text-emerald-400">PRODUCTION</a>
           </div>
         </nav>
 
-        {/* FEATURED HERO (UPGRADED CINEMATIC SPOTLIGHT) */}
+        {/* FEATURED FILM (UNCHANGED FEEL) */}
         {featured && (
-          <section className="relative px-8 py-16 max-w-6xl mx-auto">
+          <section className="px-8 py-12 max-w-6xl mx-auto">
+            <p className="text-xs tracking-[0.4em] text-emerald-400 uppercase">
+              Featured Film
+            </p>
 
-            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
+            <h1 className="text-5xl font-light mt-3">
+              {featured.title}
+            </h1>
 
-            <div className="relative z-10 max-w-2xl">
+            <p className="text-gray-400 mt-4 max-w-2xl">
+              {featured.logline}
+            </p>
 
-              <p className="text-xs tracking-[0.4em] text-emerald-400 uppercase">
-                Featured Film
-              </p>
-
-              <h1 className="text-5xl font-light mt-3">
-                {featured.title}
-              </h1>
-
-              <p className="text-gray-400 mt-4">
-                {featured.logline}
-              </p>
-
-              <p className="text-xs text-gray-500 mt-2">
-                Role: {featured.role}
-              </p>
-
-              <Link
-                href={`/production/${featured.slug}`}
-                className="inline-block mt-6 border border-emerald-400 px-6 py-2 text-sm uppercase tracking-widest hover:bg-emerald-400 hover:text-black transition"
-              >
-                Enter Film
-              </Link>
-
-            </div>
-
+            <p className="text-xs text-gray-500 mt-2">
+              Role: {featured.role}
+            </p>
           </section>
         )}
 
-        {/* FILTER BAR (NETFLIX STYLE) */}
-        <div className="sticky top-0 z-20 bg-black/80 backdrop-blur border-y border-white/10 px-8 py-3 flex gap-3 text-xs uppercase tracking-[0.3em]">
+        {/* CAROUSEL (4 ITEMS + ARROWS + WRAP) */}
+        <section className="px-8 pb-20 max-w-6xl mx-auto">
 
-          {['all', 'short', 'music', 'doc', 'commercial', 'audio'].map(t => (
-            <button
-              key={t}
-              onClick={() => setFilter(t)}
-              className={`px-3 py-1 border transition ${
-                filter === t
-                  ? 'border-emerald-400 text-emerald-400'
-                  : 'border-white/10 text-gray-400'
-              }`}
-            >
-              {t}
-            </button>
-          ))}
+          <div className="flex justify-between mb-4 text-2xl text-gray-400">
+            <button onClick={prev} className="hover:text-emerald-400">←</button>
+            <button onClick={next} className="hover:text-emerald-400">→</button>
+          </div>
 
-        </div>
+          <div className="grid grid-cols-4 gap-4">
 
-        {/* ARCHIVE ROW */}
-        <section className="px-8 py-10 max-w-6xl mx-auto">
-
-          <div className="flex gap-4 overflow-x-auto pb-4">
-
-            {filtered.map(p => (
-              <Link
+            {getVisible().map((p) => (
+              <div
                 key={p.slug}
-                href={`/production/${p.slug}`}
-                className="min-w-[260px] border border-white/10 hover:border-emerald-400/50 transition group"
+                onClick={() => setActiveVideo(p)}
+                className="border border-white/10 hover:border-emerald-400 transition cursor-pointer"
               >
 
-                <div className="h-[340px] relative overflow-hidden">
-
+                <div className="h-[320px] overflow-hidden">
                   <img
                     src={p.thumb}
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                    className="w-full h-full object-cover hover:scale-105 transition"
                   />
-
-                  {/* hover play */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                    <div className="w-12 h-12 border border-white rounded-full flex items-center justify-center">
-                      ▶
-                    </div>
-                  </div>
-
                 </div>
 
                 <div className="p-3">
-                  <p className="text-sm">{p.title}</p>
-                  <p className="text-xs text-gray-500 mt-1">{p.role}</p>
+                  <p className="text-sm capitalize">
+                    {p.type.replace('_', ' ')}
+                  </p>
+                  <p className="text-xs text-gray-500">{p.role}</p>
                 </div>
 
-              </Link>
+              </div>
             ))}
 
           </div>
-
         </section>
+
+        {/* MODAL (FIXED FOR ALL TYPES) */}
+        {activeVideo && (
+          <div
+            onClick={() => setActiveVideo(null)}
+            className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-10"
+          >
+            <div className="w-full max-w-5xl h-[80vh] border border-white/10">
+
+              <iframe
+                src={activeVideo.video}
+                className="w-full h-full"
+                allowFullScreen
+              />
+
+            </div>
+          </div>
+        )}
 
       </div>
     </main>
