@@ -22,7 +22,7 @@ export default function HomePage() {
             <a href="/" className="hover:text-emerald-400">Home</a>
             <a href="/about" className="hover:text-emerald-400">About</a>
             <a href="/pre-production" className="hover:text-emerald-400">Pre-Production</a>
-            <a href="/production" className="hover:text-emerald-400">Production</a>
+            <a href="/Production" className="hover:text-emerald-400">Production</a>
           </div>
         </nav>
 
