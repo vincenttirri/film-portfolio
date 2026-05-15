@@ -138,7 +138,7 @@ className="h-[420px] w-full object-cover group-hover:scale-105 transition durati
                     </p>
 
                     <h3 className="text-xl font-light mt-1">
-                      Vincent Tirri playing drums for his band Shadows Become Substance
+                      Vincent Tirri playing drums for his band Shadows Become Substance.
                     </h3>
                   </div>
 
