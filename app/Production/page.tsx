@@ -162,7 +162,7 @@ export default function ProductionPage() {
         </div>
       </nav>
 
-      {/* FEATURED */}
+      {/* FEATURED FILM */}
       {featured && (
         <section className="px-8 py-10 max-w-6xl mx-auto relative z-10">
 
@@ -188,6 +188,33 @@ export default function ProductionPage() {
 
         </section>
       )}
+
+      {/* SECTION NAV BUTTONS */}
+      <section className="px-8 max-w-6xl mx-auto relative z-10 mb-10">
+        <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.25em]">
+
+          <a href="#short" className="px-3 py-2 border border-white/10 hover:border-emerald-400">
+            Short Films
+          </a>
+
+          <a href="#music" className="px-3 py-2 border border-white/10 hover:border-emerald-400">
+            Music Videos
+          </a>
+
+          <a href="#doc" className="px-3 py-2 border border-white/10 hover:border-emerald-400">
+            Documentaries
+          </a>
+
+          <a href="#commercial" className="px-3 py-2 border border-white/10 hover:border-emerald-400">
+            Commercial
+          </a>
+
+          <a href="#audio" className="px-3 py-2 border border-white/10 hover:border-emerald-400">
+            Audio Editing
+          </a>
+
+        </div>
+      </section>
 
       {/* SECTIONS */}
       {renderSection("Short Films", "short")}
@@ -219,7 +246,10 @@ export default function ProductionPage() {
     const list = getByType(type);
 
     return (
-      <section className="px-8 pb-16 max-w-6xl mx-auto relative z-10">
+      <section
+        id={type}
+        className="px-8 pb-16 max-w-6xl mx-auto relative z-10 scroll-mt-24"
+      >
 
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-2xl font-light">{title}</h2>
