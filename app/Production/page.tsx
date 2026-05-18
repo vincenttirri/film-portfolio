@@ -19,7 +19,7 @@ const projects: Project[] = [
     slug: "featured-short-film",
     type: "short",
     thumb: "R THUMB V.jpg",
-    video: "https://www.youtube.com/watch?v=ajE9T5lWaqM",
+    video: "https://www.youtube.com/embed/ajE9T5lWaqM",
     logline: "A lone man stuck in an isolated experiment of control and temptation",
     role: "Director",
     featured: true
