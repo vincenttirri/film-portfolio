@@ -25,12 +25,12 @@ const projects: Project[] = [
     featured: true
   },
   {
-    title: "Short Film 2",
-    slug: "short-2",
+    title: "Mr. Mayor",
+    slug: "10 Day Film Challenge",
     type: "short",
-    thumb: "/short2.jpg",
-    video: "https://www.youtube.com/embed/xxxx",
-    logline: "TBD",
+    thumb: "Mr. Mayor.jpg",
+    video: "https://www.youtube.com/embed/ThEQJCd2vSQ",
+    logline: "A film noir following a race to becoming mayor...by any means necessary",
     role: "Director"
   },
   {
