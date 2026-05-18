@@ -15,13 +15,13 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "FEATURED SHORT FILM",
+    title: "RADIOWORLD: The Sound of Static",
     slug: "featured-short-film",
     type: "short",
-    thumb: "/short1.jpg",
-    video: "https://www.youtube.com/embed/xxxx",
-    logline: "A filmmaker struggles to distinguish reality from fiction.",
-    role: "Director / Editor",
+    thumb: "R THUMB V.jpg",
+    video: "https://www.youtube.com/watch?v=ajE9T5lWaqM",
+    logline: "A lone man stuck in an isolated experiment of control and temptation",
+    role: "Director",
     featured: true
   },
   {
