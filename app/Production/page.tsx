@@ -1,20 +1,10 @@
 'use client';
 
+
+
 import { useState } from 'react';
 
- {/* NAV */}
-        <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10">
-          <h1 className="tracking-[0.35em] text-sm text-gray-300">
-            VINCENT TIRRI
-          </h1>
 
-          <div className="flex gap-8 text-sm tracking-widest text-gray-400 uppercase">
-            <a href="/" className="hover:text-emerald-400">Home</a>
-            <a href="/about" className="hover:text-emerald-400">About</a>
-            <a href="/pre-production" className="hover:text-emerald-400">Pre-Production</a>
-            <a href="/Production" className="hover:text-emerald-400">Production</a>
-          </div>
-        </nav>
 
 type Project = {
   title: string;
@@ -51,7 +41,7 @@ const projects: Project[] = [
     title: "Everything Above",
     slug: "SkillsUSA Digital Cinema",
     type: "music",
-    thumb: "EA",
+    thumb: "EA THUMB.jpg",
     video: "https://www.youtube.com/embed/oG0P8VhuqL4",
     logline: "A narrative music video for a Tony and the Trees song created for the SkillsUSA Digital cinema state competition.",
     role: "Director / colorist"
@@ -304,3 +294,4 @@ export default function ProductionPage() {
     );
   }
 }
+
