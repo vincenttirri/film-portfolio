@@ -53,34 +53,34 @@ const projects: Project[] = [
     thumb: "SOWK THUMB.jpg",
     video: "https://www.youtube.com/embed/cBNgz-ZsEiU",
     logline: "A narrative music video for a cover of Keane's Somewhere Only We Know produced by Vincent's band Shadows Become Substance",
-    role: "Director / Actor / Editor / Writer"
+    role: "Director / Actor/ Writer/ Editor"
   },
   {
-    title: "Documentary 1",
-    slug: "doc-1",
+    title: "The Sanctuary For All",
+    slug: "Interview with Matthew Smith.",
     type: "doc",
-    thumb: "/doc1.jpg",
-    video: "https://www.youtube.com/embed/xxxx",
-    logline: "Observational storytelling.",
-    role: "Director / Camera"
+    thumb: "TSFA THUMB,jpg",
+    video: "https://www.youtube.com/embed/tdCZIEcx7uc",
+    logline: "Getting a deep dive into the message and inspiration behing the community hub local to Butler, New Jersey",
+    role: "Director / Sound / Interviewer / Writer / Editor"
   },
   {
-    title: "Documentary 2",
-    slug: "doc-2",
+    title: "The Story of Brian King",
+    slug: "Reality Suite drummer",
     type: "doc",
-    thumb: "/doc2.jpg",
-    video: "https://www.youtube.com/embed/xxxx",
-    logline: "TBD",
-    role: "Camera"
+    thumb: "TSOBK THUMB.jpg",
+    video: "https://www.youtube.com/embed/p1n2Aob98mQ",
+    logline: "In this news package, Vincent Tirri interviews Brian King, the drummer of the band Reality Suite. He dives into his influences, experiences, and career; showing how his music has changed his life",
+    role: "DIrector / Sound / Interviewer / Writer / Editor"
   },
   {
-    title: "Documentary 3",
-    slug: "doc-3",
+    title: "Once In Time, Now In Space",
+    slug: "Nasa Hunch",
     type: "doc",
-    thumb: "/doc3.jpg",
-    video: "https://www.youtube.com/embed/xxxx",
-    logline: "TBD",
-    role: "Editor"
+    thumb: "NH THUMB.jpg",
+    video: "https://www.youtube.com/embed/DZ2SC8cq1P8&list=PLyzNxIV_IRSVFLRKR3d_TM6sZglB-b7Mp&index=8",
+    logline: "My name is Vincent Tirri, and my video for NASA HUNCH represents a timeline from Artemis I which has already taken place, to Artemis V and NASA’s future plans to utilize Artemis and her strengths, in hopes to one day make a permanent base on the moon.",
+    role: "Director / Writer / Editor"
   },
   {
     title: "Commercial Project",
