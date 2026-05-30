@@ -25,7 +25,7 @@ const projects: Project[] = [
     thumb: "R THUMB V.jpg",
     video: "https://www.youtube.com/embed/ajE9T5lWaqM",
     logline: "A lone man stuck in an isolated experiment of control and temptation",
-    role: "Director",
+    role: "Director / Writer",
     featured: true
   },
   {
@@ -44,16 +44,16 @@ const projects: Project[] = [
     thumb: "EA THUMB.jpg",
     video: "https://www.youtube.com/embed/oG0P8VhuqL4",
     logline: "A narrative music video for a Tony and the Trees song created for the SkillsUSA Digital cinema state competition.",
-    role: "Director / colorist"
+    role: "Director / Colorist"
   },
   {
-    title: "Music Video 2",
-    slug: "music-2",
+    title: "Somewhere Only We Know",
+    slug: "Shadows Become Subtance original cover",
     type: "music",
-    thumb: "/music2.jpg",
-    video: "https://www.youtube.com/embed/xxxx",
-    logline: "TBD",
-    role: "Director"
+    thumb: "SOWK THUMBjpg",
+    video: "https://www.youtube.com/embed/cBNgz-ZsEiU",
+    logline: "A narrative music video for a cover of Keane's Somewhere Only We Know produced by Vincent's band Shadows Become Substance",
+    role: "Director / Actor / Editor / Writer"
   },
   {
     title: "Documentary 1",
