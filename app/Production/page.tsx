@@ -25,7 +25,7 @@ const projects: Project[] = [
     thumb: "R THUMB V.jpg",
     video: "https://www.youtube.com/embed/ajE9T5lWaqM",
     logline: "A lone man stuck in an isolated experiment of control and temptation",
-    role: "Director / Writer",
+    role: "Director / Writergit add .",
     featured: true
   },
   {
@@ -50,7 +50,7 @@ const projects: Project[] = [
     title: "Somewhere Only We Know",
     slug: "Shadows Become Subtance original cover",
     type: "music",
-    thumb: "SOWK THUMBjpg",
+    thumb: "SOWK THUMB.jpg",
     video: "https://www.youtube.com/embed/cBNgz-ZsEiU",
     logline: "A narrative music video for a cover of Keane's Somewhere Only We Know produced by Vincent's band Shadows Become Substance",
     role: "Director / Actor / Editor / Writer"
