@@ -59,7 +59,7 @@ const projects: Project[] = [
     title: "The Sanctuary For All",
     slug: "Interview with Matthew Smith.",
     type: "doc",
-    thumb: "TSFA THUMB,jpg",
+    thumb: "TSFA THUMB.jpg",
     video: "https://www.youtube.com/embed/tdCZIEcx7uc",
     logline: "Getting a deep dive into the message and inspiration behing the community hub local to Butler, New Jersey",
     role: "Director / Sound / Interviewer / Writer / Editor"
