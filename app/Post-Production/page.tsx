@@ -10,20 +10,18 @@ export default function PostProductionPage() {
 
       {/* NAV */}
       <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10 relative z-20">
-        <h1 className="tracking-[0.35em] text-sm text-gray-300">
-          POST PRODUCTION
-        </h1>
+  <h1 className="tracking-[0.35em] text-sm text-gray-300">
+    POST PRODUCTION
+  </h1>
 
-        <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
-          <a href="/">HOME</a>
-          <a href="/about">ABOUT</a>
-          <a href="/pre-production">PRE-PRODUCTION</a>
-          <a href="/production">PRODUCTION</a>
-          <a href="/post-production" className="text-emerald-400">
-            POST PRODUCTION
-          </a>
-        </div>
-      </nav>
+  <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
+    <a href="/" className="hover:text-emerald-400 transition">HOME</a>
+    <a href="/about" className="hover:text-emerald-400 transition">ABOUT</a>
+    <a href="/pre-production" className="hover:text-emerald-400 transition">PRE-PRODUCTION</a>
+    <a href="/production" className="hover:text-emerald-400 transition">PRODUCTION</a>
+    <a href="/post-production" className="text-emerald-400">POST PRODUCTION</a>
+  </div>
+</nav>
 
       {/* HEADER */}
       <section className="px-8 py-12 max-w-6xl mx-auto relative z-10">

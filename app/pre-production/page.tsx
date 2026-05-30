@@ -85,18 +85,19 @@ export default function PreProductionPage() {
       <div className="relative z-10">
 
         {/* NAV */}
-        <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10">
-          <h1 className="tracking-[0.35em] text-sm text-gray-300">
-            PRODUCTION ARCHIVE
-          </h1>
+       <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10 relative z-20">
+  <h1 className="tracking-[0.35em] text-sm text-gray-300">
+    PRODUCTION ARCHIVE
+  </h1>
 
-          <div className="flex gap-8 text-sm tracking-widest uppercase text-gray-400">
-            <a href="/" className="hover:text-emerald-400">Home</a>
-            <a href="/about" className="hover:text-emerald-400">About</a>
-            <a href="/pre-production" className="text-emerald-400">Pre-Production</a>
-            <a href="/Production" className="hover:text-emerald-400">Production</a>
-          </div>
-        </nav>
+  <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
+    <a href="/" className="hover:text-emerald-400 transition">HOME</a>
+    <a href="/about" className="hover:text-emerald-400 transition">ABOUT</a>
+    <a href="/pre-production" className="text-emerald-400">PRE-PRODUCTION</a>
+    <a href="/production" className="hover:text-emerald-400 transition">PRODUCTION</a>
+    <a href="/post-production" className="hover:text-emerald-400 transition">POST PRODUCTION</a>
+  </div>
+</nav>
 
         {/* HEADER */}
         <section className="px-8 py-12 max-w-6xl mx-auto">

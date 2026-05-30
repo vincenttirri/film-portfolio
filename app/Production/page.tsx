@@ -142,17 +142,18 @@ export default function ProductionPage() {
 
       {/* NAV */}
       <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10 relative z-20">
-        <h1 className="tracking-[0.35em] text-sm text-gray-300">
-          VINCENT TIRRI
-        </h1>
+  <h1 className="tracking-[0.35em] text-sm text-gray-300">
+    PRODUCTION ARCHIVE
+  </h1>
 
-        <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
-          <a href="/">HOME</a>
-          <a href="/about">ABOUT</a>
-          <a href="/pre-production">PRE-PRODUCTION</a>
-          <a href="/production" className="text-emerald-400">PRODUCTION</a>
-        </div>
-      </nav>
+  <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
+    <a href="/" className="hover:text-emerald-400 transition">HOME</a>
+    <a href="/about" className="hover:text-emerald-400 transition">ABOUT</a>
+    <a href="/pre-production" className="hover:text-emerald-400 transition">PRE-PRODUCTION</a>
+    <a href="/production" className="text-emerald-400">PRODUCTION</a>
+    <a href="/post-production" className="hover:text-emerald-400 transition">POST PRODUCTION</a>
+  </div>
+</nav>
 
       {/* FEATURED */}
       {featured && (

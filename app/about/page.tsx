@@ -16,31 +16,19 @@ export default function AboutPage() {
       <div className="relative z-10 flex flex-col min-h-screen">
 
         {/* NAV */}
-        <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10">
+       <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10 relative z-20">
+  <h1 className="tracking-[0.35em] text-sm text-gray-300">
+    VINCENT TIRRI
+  </h1>
 
-          <h1 className="tracking-[0.35em] text-sm text-gray-300">
-            ABOUT ME
-          </h1>
-
-          <div className="flex gap-8 text-sm tracking-widest text-gray-400 uppercase">
-            <a href="/" className="hover:text-emerald-400 transition">
-              Home
-            </a>
-
-            <a href="/about" className="text-emerald-400">
-              About
-            </a>
-
-            <a href="/pre-production" className="hover:text-emerald-400 transition">
-              Pre-Production
-            </a>
-
-            <a href="/Production" className="hover:text-emerald-400 transition">
-              Production
-            </a>
-          </div>
-
-        </nav>
+  <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
+    <a href="/" className="hover:text-emerald-400 transition">HOME</a>
+    <a href="/about" className="text-emerald-400">ABOUT</a>
+    <a href="/pre-production" className="hover:text-emerald-400 transition">PRE-PRODUCTION</a>
+    <a href="/production" className="hover:text-emerald-400 transition">PRODUCTION</a>
+    <a href="/post-production" className="hover:text-emerald-400 transition">POST PRODUCTION</a>
+  </div>
+</nav>
 
         {/* MAIN */}
         <main className="flex-1 flex items-center px-6 py-10">
