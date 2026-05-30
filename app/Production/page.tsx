@@ -1,15 +1,11 @@
 'use client';
 
-
-
 import { useState } from 'react';
-
-
 
 type Project = {
   title: string;
   slug: string;
-  type: 'short' | 'music' | 'doc' | 'commercial' | 'audio'
+  type: 'short' | 'music' | 'doc' | 'commercial' | 'audio';
   thumb: string;
   video: string;
   logline: string;
@@ -25,7 +21,7 @@ const projects: Project[] = [
     thumb: "R THUMB V.jpg",
     video: "https://www.youtube.com/embed/ajE9T5lWaqM",
     logline: "A lone man stuck in an isolated experiment of control and temptation",
-    role: "Director / Writergit add .",
+    role: "Director / Writer",
     featured: true
   },
   {
@@ -43,25 +39,25 @@ const projects: Project[] = [
     type: "music",
     thumb: "EA THUMB.jpg",
     video: "https://www.youtube.com/embed/oG0P8VhuqL4",
-    logline: "A narrative music video for a Tony and the Trees song created for the SkillsUSA Digital cinema state competition.",
+    logline: "A narrative music video for a Tony and the Trees song created for SkillsUSA.",
     role: "Director / Colorist"
   },
   {
     title: "Somewhere Only We Know",
-    slug: "Shadows Become Subtance original cover",
+    slug: "Shadows Become Substance cover",
     type: "music",
     thumb: "SOWK THUMB.jpg",
     video: "https://www.youtube.com/embed/cBNgz-ZsEiU",
-    logline: "A narrative music video for a cover of Keane's Somewhere Only We Know produced by Vincent's band Shadows Become Substance",
-    role: "Director / Actor/ Writer/ Editor"
+    logline: "A narrative music video cover produced with Shadows Become Substance.",
+    role: "Director / Actor / Writer / Editor"
   },
   {
     title: "The Sanctuary For All",
-    slug: "Interview with Matthew Smith.",
+    slug: "Interview with Matthew Smith",
     type: "doc",
     thumb: "TSFA THUMB.jpg",
     video: "https://www.youtube.com/embed/tdCZIEcx7uc",
-    logline: "Getting a deep dive into the message and inspiration behing the community hub local to Butler, New Jersey",
+    logline: "A deep dive into a community hub in Butler, New Jersey.",
     role: "Director / Sound / Interviewer / Writer / Editor"
   },
   {
@@ -70,35 +66,35 @@ const projects: Project[] = [
     type: "doc",
     thumb: "TSOBK THUMB.jpg",
     video: "https://www.youtube.com/embed/p1n2Aob98mQ",
-    logline: "In this news package, Vincent Tirri interviews Brian King, the drummer of the band Reality Suite. He dives into his influences, experiences, and career; showing how his music has changed his life",
-    role: "DIrector / Sound / Interviewer / Writer / Editor"
+    logline: "Interview with Brian King, drummer of Reality Suite.",
+    role: "Director / Sound / Interviewer / Writer / Editor"
   },
   {
     title: "Once In Time, Now In Space",
-    slug: "Nasa Hunch",
+    slug: "NASA HUNCH",
     type: "doc",
     thumb: "NH THUMB.jpg",
-    video: "https://www.youtube.com/embed/DZ2SC8cq1P8&list=PLyzNxIV_IRSVFLRKR3d_TM6sZglB-b7Mp&index=8",
-    logline: "My name is Vincent Tirri, and my video for NASA HUNCH represents a timeline from Artemis I which has already taken place, to Artemis V and NASA’s future plans to utilize Artemis and her strengths, in hopes to one day make a permanent base on the moon.",
+    video: "https://www.youtube.com/embed/DZ2SC8cq1P8",
+    logline: "A timeline of NASA’s Artemis mission and future lunar exploration.",
     role: "Director / Writer / Editor"
   },
   {
     title: "Donut NV",
-    slug: "Local donut food truck",
+    slug: "Commercial",
     type: "commercial",
     thumb: "DNV THUMB.jpg",
     video: "https://www.youtube.com/embed/SQDyKNhNdkg",
-    logline: "FInd out about this local donut hot spot on wheels!",
-    role: "Editor / Voice over"
+    logline: "A local donut food truck commercial.",
+    role: "Editor / Voice Over"
   },
   {
     title: "Revenge of the Sith",
-    slug: "Star Wars parody",
+    slug: "Audio project",
     type: "audio",
     thumb: "SW THUMB.jpg",
     video: "https://www.youtube.com/embed/4TqqUuOsVwQ",
-    logline: "A parody of a scene from Star Wars done through use of audio editing.",
-    role: "Sound Editor / Voice over / Foley producer"
+    logline: "Audio editing parody of Star Wars.",
+    role: "Sound Editor / Voice Over / Foley"
   }
 ];
 
@@ -116,31 +112,23 @@ export default function ProductionPage() {
   const getByType = (type: Project['type']) =>
     projects.filter(p => p.type === type);
 
-  const visibleCount = 4;
-
   const getVisible = (type: Project['type']) => {
     const list = getByType(type);
     const start = index[type];
 
-    return Array.from({ length: Math.min(visibleCount, list.length) }).map(
+    return Array.from({ length: Math.min(4, list.length) }).map(
       (_, i) => list[(start + i) % list.length]
     );
   };
 
   const next = (type: Project['type']) => {
     const len = getByType(type).length;
-    setIndex(prev => ({
-      ...prev,
-      [type]: (prev[type] + 1) % len
-    }));
+    setIndex(prev => ({ ...prev, [type]: (prev[type] + 1) % len }));
   };
 
   const prev = (type: Project['type']) => {
     const len = getByType(type).length;
-    setIndex(prev => ({
-      ...prev,
-      [type]: (prev[type] - 1 + len) % len
-    }));
+    setIndex(prev => ({ ...prev, [type]: (prev[type] - 1 + len) % len }));
   };
 
   const featured = projects.find(p => p.featured);
@@ -153,9 +141,9 @@ export default function ProductionPage() {
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.10),transparent_60%)] pointer-events-none" />
 
       {/* NAV */}
-      <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10">
+      <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10 relative z-20">
         <h1 className="tracking-[0.35em] text-sm text-gray-300">
-          PRODUCTION ARCHIVE
+          VINCENT TIRRI
         </h1>
 
         <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
@@ -166,7 +154,7 @@ export default function ProductionPage() {
         </div>
       </nav>
 
-      {/* FEATURED FILM */}
+      {/* FEATURED */}
       {featured && (
         <section className="px-8 py-10 max-w-6xl mx-auto relative z-10">
 
@@ -182,6 +170,10 @@ export default function ProductionPage() {
             {featured.logline}
           </p>
 
+          <p className="text-sm text-gray-500 mt-2">
+            Role: {featured.role}
+          </p>
+
           <div className="mt-6 aspect-video border border-white/10">
             <iframe
               src={featured.video}
@@ -193,30 +185,14 @@ export default function ProductionPage() {
         </section>
       )}
 
-      {/* SECTION NAV BUTTONS */}
-      <section className="px-8 max-w-6xl mx-auto relative z-10 mb-10">
+      {/* SECTION BUTTONS */}
+      <section className="px-8 max-w-6xl mx-auto mb-10 z-10 relative">
         <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.25em]">
-
-          <a href="#short" className="px-3 py-2 border border-white/10 hover:border-emerald-400">
-            Short Films
-          </a>
-
-          <a href="#music" className="px-3 py-2 border border-white/10 hover:border-emerald-400">
-            Music Videos
-          </a>
-
-          <a href="#doc" className="px-3 py-2 border border-white/10 hover:border-emerald-400">
-            Documentaries
-          </a>
-
-          <a href="#commercial" className="px-3 py-2 border border-white/10 hover:border-emerald-400">
-            Commercial
-          </a>
-
-          <a href="#audio" className="px-3 py-2 border border-white/10 hover:border-emerald-400">
-            Audio Editing
-          </a>
-
+          <a href="#short" className="px-3 py-2 border border-white/10 hover:border-emerald-400">Short Films</a>
+          <a href="#music" className="px-3 py-2 border border-white/10 hover:border-emerald-400">Music Videos</a>
+          <a href="#doc" className="px-3 py-2 border border-white/10 hover:border-emerald-400">Documentaries</a>
+          <a href="#commercial" className="px-3 py-2 border border-white/10 hover:border-emerald-400">Commercial</a>
+          <a href="#audio" className="px-3 py-2 border border-white/10 hover:border-emerald-400">Audio Editing</a>
         </div>
       </section>
 
@@ -247,16 +223,11 @@ export default function ProductionPage() {
   );
 
   function renderSection(title: string, type: Project['type']) {
-    const list = getByType(type);
-
     return (
-      <section
-        id={type}
-        className="px-8 pb-16 max-w-6xl mx-auto relative z-10 scroll-mt-24"
-      >
+      <section id={type} className="px-8 pb-16 max-w-6xl mx-auto scroll-mt-24 z-10 relative">
 
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-light">{title}</h2>
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-3xl font-light">{title}</h2>
 
           <div className="flex gap-4 text-2xl text-gray-400">
             <button onClick={() => prev(type)}>←</button>
@@ -264,25 +235,38 @@ export default function ProductionPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-          {getVisible(type).map((p) => (
+          {getVisible(type).map(p => (
             <div
               key={p.slug}
               onClick={() => setActiveVideo(p)}
-              className="border border-white/10 hover:border-emerald-400 cursor-pointer"
+              className="border border-white/10 hover:border-emerald-400 cursor-pointer bg-black/40 overflow-hidden"
             >
 
-              <div className="h-[300px] overflow-hidden">
+              <div className="aspect-video overflow-hidden">
                 <img
                   src={p.thumb}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover:scale-105 transition duration-500"
                 />
               </div>
 
-              <div className="p-3">
-                <p className="text-sm capitalize">{p.type}</p>
-                <p className="text-xs text-gray-500">{p.role}</p>
+              <div className="p-4">
+
+                <h3 className="text-lg font-light">{p.title}</h3>
+
+                <p className="text-xs text-emerald-400 uppercase tracking-[0.2em] mt-1">
+                  {title}
+                </p>
+
+                <p className="text-sm text-gray-400 mt-2">
+                  {p.logline}
+                </p>
+
+                <p className="text-xs text-gray-500 mt-3">
+                  Role: {p.role}
+                </p>
+
               </div>
 
             </div>
@@ -294,4 +278,3 @@ export default function ProductionPage() {
     );
   }
 }
-
