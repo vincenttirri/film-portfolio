@@ -83,22 +83,22 @@ const projects: Project[] = [
     role: "Director / Writer / Editor"
   },
   {
-    title: "Commercial Project",
-    slug: "commercial",
+    title: "Donut NV",
+    slug: "Local donut food truck",
     type: "commercial",
-    thumb: "/commercial.jpg",
-    video: "https://www.youtube.com/embed/xxxx",
-    logline: "Brand storytelling.",
-    role: "Director / Editor"
+    thumb: "DNV THUMB.jpg",
+    video: "https://www.youtube.com/embed/SQDyKNhNdkg",
+    logline: "FInd out about this local donut hot spot on wheels!",
+    role: "Editor / Voice over"
   },
   {
-    title: "Audio Editing Project",
-    slug: "audio",
+    title: "Revenge of the Sith",
+    slug: "Star Wars parody",
     type: "audio",
-    thumb: "/audio.jpg",
-    video: "https://www.youtube.com/embed/xxxx",
-    logline: "Sound design narrative work.",
-    role: "Sound Editor"
+    thumb: "SW THUMB.jpg",
+    video: "https://www.youtube.com/embed/4TqqUuOsVwQ",
+    logline: "A parody of a scene from Star Wars done through use of audio editing.",
+    role: "Sound Editor / Voice over / Foley producer"
   }
 ];
 
