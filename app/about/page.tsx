@@ -25,8 +25,8 @@ export default function AboutPage() {
     <a href="/" className="hover:text-emerald-400 transition">HOME</a>
     <a href="/about" className="text-emerald-400">ABOUT</a>
     <a href="/pre-production" className="hover:text-emerald-400 transition">PRE-PRODUCTION</a>
-    <a href="/production" className="hover:text-emerald-400 transition">PRODUCTION</a>
-    <a href="/post-production" className="hover:text-emerald-400 transition">POST PRODUCTION</a>
+    <a href="/Production" className="hover:text-emerald-400 transition">PRODUCTION</a>
+    <a href="/Postss-Production" className="hover:text-emerald-400 transition">POST PRODUCTION</a>
   </div>
 </nav>
 
