@@ -22,8 +22,8 @@ export default function HomePage() {
     <a href="/" className="text-emerald-400">HOME</a>
     <a href="/about" className="hover:text-emerald-400 transition">ABOUT</a>
     <a href="/pre-production" className="hover:text-emerald-400 transition">PRE-PRODUCTION</a>
-    <a href="/production" className="hover:text-emerald-400 transition">PRODUCTION</a>
-    <a href="/post-production" className="hover:text-emerald-400 transition">POST PRODUCTION</a>
+   <a href="/Production">PRODUCTION</a>
+<a href="/Post-Production">POST PRODUCTION</a>
   </div>
 </nav>
 
