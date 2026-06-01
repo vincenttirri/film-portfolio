@@ -14,18 +14,18 @@ export default function HomePage() {
 
         {/* NAV */}
         <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10 relative z-20">
-  <h1 className="tracking-[0.35em] text-sm text-gray-300">
-    VINCENT TIRRI
-  </h1>
+          <h1 className="tracking-[0.35em] text-sm text-gray-300">
+            VINCENT TIRRI
+          </h1>
 
-  <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
-    <a href="/" className="text-emerald-400">HOME</a>
-    <a href="/about" className="hover:text-emerald-400 transition">ABOUT</a>
-    <a href="/pre-production" className="hover:text-emerald-400 transition">PRE-PRODUCTION</a>
-   <a href="/Production">PRODUCTION</a>
-<a href="/Post-Production">POST PRODUCTION</a>
-  </div>
-</nav>
+          <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
+            <a href="/" className="text-emerald-400">HOME</a>
+            <a href="/about" className="hover:text-emerald-400 transition">ABOUT</a>
+            <a href="/pre-production" className="hover:text-emerald-400 transition">PRE-PRODUCTION</a>
+            <a href="/Production" className="hover:text-emerald-400 transition">PRODUCTION</a>
+            <a href="/Post-Production">POST PRODUCTION</a>
+          </div>
+        </nav>
 
         {/* MAIN */}
         <section className="flex-1 flex items-center px-6">
@@ -46,6 +46,7 @@ export default function HomePage() {
               <p className="text-lg text-gray-400 leading-relaxed">
                 A filmmaker focused on directing, cinematography, editing, and music-driven storytelling.
                 This portfolio documents my growth through short films and productions.
+                This website is where you will find details about my experiences from the Video Production Program at PCTI.
               </p>
 
             </div>
@@ -58,6 +59,11 @@ export default function HomePage() {
                 alt="Portrait of Vincent Tirri"
                 className="h-[560px] w-full max-w-md object-cover object-top border border-white/10"
               />
+
+              {/* CAPTION */}
+              <p className="text-xs tracking-[0.3em] text-gray-500 uppercase text-center">
+                Broze medalist for SkillsUSA Digital Cinema state compeition.
+              </p>
 
               {/* EMAIL */}
               <div className="text-center">
@@ -73,21 +79,11 @@ export default function HomePage() {
                 </a>
               </div>
 
-              {/* QUOTE (YOUR EXACT TEXT) */}
-              <p className="text-sm italic text-gray-400 border-l border-emerald-400 pl-4 text-center">
-                “This website is where you will find details about my experiences from the Video Production Program at PCTI.”
-              </p>
-
             </div>
 
           </div>
 
         </section>
-
-        {/* FOOTER */}
-        <footer className="text-center text-[10px] tracking-[0.3em] text-gray-600 py-5 border-t border-white/10">
-          © 2026 VINCENT TIRRI FILM PORTFOLIO
-        </footer>
 
       </div>
 

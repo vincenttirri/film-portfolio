@@ -22,7 +22,7 @@ export default function PostProductionPage() {
           <a href="/" className="hover:text-emerald-400 transition">HOME</a>
           <a href="/about" className="hover:text-emerald-400 transition">ABOUT</a>
           <a href="/pre-production" className="hover:text-emerald-400 transition">PRE-PRODUCTION</a>
-          <a href="/Production" className="hover:text-emerald-400 transition">PRODUCTION</a>
+    <a href="/Production" className="hover:text-emerald-400 transition">PRODUCTION</a>
           <a href="/Post-Production" className="text-emerald-400">POST PRODUCTION</a>
         </div>
       </nav>

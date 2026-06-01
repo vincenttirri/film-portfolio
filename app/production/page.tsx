@@ -150,7 +150,7 @@ export default function ProductionPage() {
     <a href="/" className="hover:text-emerald-400 transition">HOME</a>
     <a href="/about" className="hover:text-emerald-400 transition">ABOUT</a>
     <a href="/pre-production" className="hover:text-emerald-400 transition">PRE-PRODUCTION</a>
-    <a href="/production" className="text-emerald-400">PRODUCTION</a>
+    <a href="/Production" className="hover:text-emerald-400 transition">PRODUCTION</a>
     <a href="/Post-Production" className="hover:text-emerald-400 transition">POST PRODUCTION</a>
   </div>
 </nav>
