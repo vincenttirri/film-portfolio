@@ -66,7 +66,7 @@ export default function PostProductionPage() {
                 className="cursor-pointer border border-white/10 hover:border-emerald-400 transition"
               >
                 <img
-                  src="/reflection-thumb.jpg"
+                  src="Reflection paper.pdf"
                   alt="Reflection"
                   className="h-[220px] w-full object-cover"
                 />
@@ -88,7 +88,7 @@ export default function PostProductionPage() {
                 className="cursor-pointer border border-white/10 hover:border-emerald-400 transition"
               >
                 <img
-                  src="/career-thumb.jpg"
+                  src="_Resume.docx (3).pdf"
                   alt="Career Reflection"
                   className="h-[220px] w-full object-cover"
                 />
