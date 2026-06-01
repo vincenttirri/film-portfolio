@@ -13,7 +13,7 @@ export default function PostProductionPage() {
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.10),transparent_60%)] pointer-events-none" />
 
       {/* NAV */}
-      <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10 relative z-20">
+      <nav className="flex justify-between items-center px-8 py-5 border-b border-white/10 relative z-20">
         <h1 className="tracking-[0.35em] text-sm text-gray-300">
           POST PRODUCTION
         </h1>
@@ -28,17 +28,17 @@ export default function PostProductionPage() {
       </nav>
 
       {/* HEADER */}
-      <section className="px-8 py-10 max-w-7xl mx-auto relative z-10">
+      <section className="px-8 py-6 max-w-7xl mx-auto relative z-10">
 
         <p className="text-xs tracking-[0.4em] text-emerald-400 uppercase">
           Reflection & Analysis
         </p>
 
-        <h1 className="text-5xl font-light mt-3">
+        <h1 className="text-4xl font-light mt-2">
           Post Production Portfolio
         </h1>
 
-        <p className="text-gray-400 mt-4 max-w-3xl">
+        <p className="text-gray-400 mt-3 max-w-3xl text-sm">
           A reflection on creative growth, technical development,
           leadership, and the real-world skills developed throughout
           the Video Production program.
@@ -46,69 +46,53 @@ export default function PostProductionPage() {
 
       </section>
 
-      {/* MAIN CONTENT */}
-      <section className="px-8 pb-16 max-w-7xl mx-auto relative z-10">
+      {/* CONTENT */}
+      <section className="px-8 pb-10 max-w-7xl mx-auto relative z-10">
 
-        <div className="grid lg:grid-cols-2 gap-10">
+        <div className="grid lg:grid-cols-2 gap-8">
 
-          {/* PDF SIDE */}
+          {/* DOCUMENTS */}
           <div>
 
-            <h2 className="text-2xl font-light mb-6">
+            <h2 className="text-2xl font-light mb-4">
               Reflection Documents
             </h2>
 
-            <div className="space-y-6">
+            <div className="grid grid-cols-2 gap-4">
 
-              {/* PDF 1 */}
               <div
                 onClick={() => setActivePdf('Reflection paper.pdf')}
-                className="cursor-pointer border border-white/10 hover:border-emerald-400 transition p-5"
+                className="cursor-pointer border border-white/10 hover:border-emerald-400 transition p-3"
               >
                 <div className="flex justify-center">
-
                   <img
                     src="Reflection paper_page-0001.jpg"
                     alt="Reflection"
-                    className="h-[450px] w-auto object-contain border border-white/10"
+                    className="h-[300px] w-auto object-contain border border-white/10"
                   />
-
                 </div>
 
-                <div className="pt-4 text-center">
-                  <p className="text-sm">
-                    Self Reflection Paper
-                  </p>
-
-                  <p className="text-xs text-gray-500">
-                    PDF Document
-                  </p>
+                <div className="pt-3 text-center">
+                  <p className="text-sm">Self Reflection Paper</p>
+                  <p className="text-xs text-gray-500">PDF Document</p>
                 </div>
               </div>
 
-              {/* PDF 2 */}
               <div
                 onClick={() => setActivePdf('_Resume.docx (3).pdf')}
-                className="cursor-pointer border border-white/10 hover:border-emerald-400 transition p-5"
+                className="cursor-pointer border border-white/10 hover:border-emerald-400 transition p-3"
               >
                 <div className="flex justify-center">
-
                   <img
                     src="_Resume.docx (3)_page-0001.jpg"
                     alt="Resume"
-                    className="h-[450px] w-auto object-contain border border-white/10"
+                    className="h-[300px] w-auto object-contain border border-white/10"
                   />
-
                 </div>
 
-                <div className="pt-4 text-center">
-                  <p className="text-sm">
-                    Resume
-                  </p>
-
-                  <p className="text-xs text-gray-500">
-                    PDF Document
-                  </p>
+                <div className="pt-3 text-center">
+                  <p className="text-sm">Resume</p>
+                  <p className="text-xs text-gray-500">PDF Document</p>
                 </div>
               </div>
 
@@ -116,84 +100,64 @@ export default function PostProductionPage() {
 
           </div>
 
-          {/* QUESTIONS SIDE */}
+          {/* REFLECTIONS */}
           <div>
 
-            <h2 className="text-2xl font-light mb-6">
+            <h2 className="text-2xl font-light mb-4">
               Course Reflection Responses
             </h2>
 
-            <div className="space-y-6 text-sm text-gray-400 leading-relaxed">
+            <div className="space-y-4 text-sm text-gray-400 leading-relaxed">
 
               <div className="border-l border-emerald-400 pl-4">
-                <h3 className="text-emerald-400 mb-2">
+                <h3 className="text-emerald-400 mb-1">
                   How This Course Prepares You For Life
                 </h3>
 
                 <p>
-                  Video production at PCTVS prepares me for life by developing
-                  communication, teamwork, leadership, and problem-solving
-                  skills through real production experiences. Creating films
-                  requires working with deadlines, adapting to challenges,
-                  and collaborating effectively with others, all of which
-                  mirror expectations found in college and professional
-                  environments.
+                  Video production at PCTVS prepares me for life by developing communication,
+                  teamwork, leadership, and problem-solving skills through real production
+                  experiences. Creating films requires working with deadlines, adapting to
+                  challenges, and collaborating effectively with others.
                 </p>
               </div>
 
               <div className="border-l border-emerald-400 pl-4">
-                <h3 className="text-emerald-400 mb-2">
+                <h3 className="text-emerald-400 mb-1">
                   Why This Course Is Worth Taking
                 </h3>
 
                 <p>
-                  Video Production at PCTVS is a valuable course because it
-                  provides hands-on experience with industry-standard
-                  equipment and software. Rather than simply learning theory,
-                  students actively create projects that develop technical
-                  skills while building a professional portfolio that
-                  demonstrates growth and achievement.
+                  Video Production at PCTVS is valuable because it provides hands-on
+                  experience with industry-standard equipment and software. Students
+                  create projects that build both technical skills and a professional portfolio.
                 </p>
               </div>
 
               <div className="border-l border-emerald-400 pl-4">
-                <h3 className="text-emerald-400 mb-2">
+                <h3 className="text-emerald-400 mb-1">
                   Evidence Supporting Its Value Outside The Profession
                 </h3>
 
                 <p>
-                  Skills learned in this class extend far beyond filmmaking.
-                  Managing productions strengthens organization and time
-                  management. Interviewing subjects improves communication
-                  and confidence. Working in crews develops teamwork and
-                  leadership skills that are applicable in nearly every
-                  career field and everyday life situation.
+                  Skills learned in this class extend beyond filmmaking. Production planning
+                  improves organization, interviews improve communication, and teamwork
+                  develops leadership abilities useful in any career field.
                 </p>
               </div>
 
               <div className="border-l border-emerald-400 pl-4">
-                <h3 className="text-emerald-400 mb-2">
+                <h3 className="text-emerald-400 mb-1">
                   Successes, Growth, And Areas For Improvement
                 </h3>
 
-                <p className="mb-3">
-                  Throughout this course, I found the greatest success in
-                  directing productions, leading collaborative projects,
-                  and developing my editing abilities.
-                </p>
-
-                <p className="mb-3">
-                  Areas for improvement include refining audio mixing,
-                  increasing editing efficiency, and improving long-term
-                  project planning. Continued practice and experimentation
-                  with advanced editing and sound techniques will help
-                  strengthen these skills.
-                </p>
-
                 <p>
-                  Three examples of success include directing multiple short
-                  films, completing a narrative music video under competition
-                  deadlines, and producing documentary projects that required
+                  Throughout this course I excelled most in directing productions,
+                  leading collaborative projects, and developing my editing abilities.
+                  Areas for improvement include audio mixing, editing efficiency,
+                  and long-term project planning. Three examples of success include
+                  directing multiple short films, completing a music video under
+                  competition deadlines, and producing documentary projects requiring
                   research, interviewing, editing, and storytelling.
                 </p>
               </div>
@@ -213,18 +177,16 @@ export default function PostProductionPage() {
           className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-10"
         >
           <div className="w-full max-w-6xl h-[90vh] border border-white/20 bg-black">
-
             <iframe
               src={activePdf}
               className="w-full h-full"
             />
-
           </div>
         </div>
       )}
 
       {/* FOOTER */}
-      <footer className="text-center text-[10px] tracking-[0.3em] text-gray-600 py-6 border-t border-white/10 relative z-10">
+      <footer className="text-center text-[10px] tracking-[0.3em] text-gray-600 py-5 border-t border-white/10 relative z-10">
         POST PRODUCTION REFLECTION SYSTEM
       </footer>
 
