@@ -58,20 +58,24 @@ export default function PostProductionPage() {
               Reflection Documents
             </h2>
 
-            <div className="space-y-5">
+            <div className="space-y-6">
 
               {/* PDF 1 */}
               <div
-                onClick={() => setActivePdf('/self-reflection.pdf')}
-                className="cursor-pointer border border-white/10 hover:border-emerald-400 transition"
+                onClick={() => setActivePdf('Reflection paper.pdf')}
+                className="cursor-pointer border border-white/10 hover:border-emerald-400 transition p-5"
               >
-                <img
-                  src="Reflection paper.pdf"
-                  alt="Reflection"
-                  className="h-[220px] w-full object-cover"
-                />
+                <div className="flex justify-center">
 
-                <div className="p-4">
+                  <img
+                    src="Reflection paper_page-0001.jpg"
+                    alt="Reflection"
+                    className="h-[450px] w-auto object-contain border border-white/10"
+                  />
+
+                </div>
+
+                <div className="pt-4 text-center">
                   <p className="text-sm">
                     Self Reflection Paper
                   </p>
@@ -84,18 +88,22 @@ export default function PostProductionPage() {
 
               {/* PDF 2 */}
               <div
-                onClick={() => setActivePdf('/career-reflection.pdf')}
-                className="cursor-pointer border border-white/10 hover:border-emerald-400 transition"
+                onClick={() => setActivePdf('_Resume.docx (3).pdf')}
+                className="cursor-pointer border border-white/10 hover:border-emerald-400 transition p-5"
               >
-                <img
-                  src="_Resume.docx (3).pdf"
-                  alt="Career Reflection"
-                  className="h-[220px] w-full object-cover"
-                />
+                <div className="flex justify-center">
 
-                <div className="p-4">
+                  <img
+                    src="_Resume.docx (3)_page-0001.jpg"
+                    alt="Resume"
+                    className="h-[450px] w-auto object-contain border border-white/10"
+                  />
+
+                </div>
+
+                <div className="pt-4 text-center">
                   <p className="text-sm">
-                    Portfolio Reflection
+                    Resume
                   </p>
 
                   <p className="text-xs text-gray-500">
@@ -139,12 +147,12 @@ export default function PostProductionPage() {
                 </h3>
 
                 <p>
-                  Video Production at PCTVS is a valuable course because it provides hands-on
-                  experience with industry-standard equipment and software.
-                  Rather than simply learning theory, I as well as all the other students actively
-                  create projects that develop technical skills while
-                  building a professional portfolio that demonstrates
-                  growth and achievement.
+                  Video Production at PCTVS is a valuable course because it
+                  provides hands-on experience with industry-standard
+                  equipment and software. Rather than simply learning theory,
+                  students actively create projects that develop technical
+                  skills while building a professional portfolio that
+                  demonstrates growth and achievement.
                 </p>
               </div>
 
@@ -171,10 +179,7 @@ export default function PostProductionPage() {
                 <p className="mb-3">
                   Throughout this course, I found the greatest success in
                   directing productions, leading collaborative projects,
-                  and developing my editing abilities. I learned the most
-                  through hands-on filmmaking experiences where creative
-                  and technical decisions had to be made under real-world
-                  production conditions.
+                  and developing my editing abilities.
                 </p>
 
                 <p className="mb-3">
