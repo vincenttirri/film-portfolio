@@ -61,9 +61,9 @@ export default function HomePage() {
               />
 
               {/* CAPTION */}
-              <p className="text-xs tracking-[0.3em] text-gray-500 uppercase text-center">
+                    <h3 className="text-xl font-light mt-1">
                 Broze medalist for SkillsUSA Digital Cinema state compeition.
-              </p>
+              </h3>
 
               {/* EMAIL */}
               <div className="text-center">
