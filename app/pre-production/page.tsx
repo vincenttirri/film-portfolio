@@ -90,13 +90,13 @@ export default function PreProductionPage() {
     PRODUCTION ARCHIVE
   </h1>
 
-  <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
-    <a href="/" className="hover:text-emerald-400 transition">HOME</a>
-    <a href="/about" className="hover:text-emerald-400 transition">ABOUT</a>
-    <a href="/pre-production" className="text-emerald-400">PRE-PRODUCTION</a>
-    <a href="/production" className="hover:text-emerald-400 transition">PRODUCTION</a>
-    <a href="/post-production" className="hover:text-emerald-400 transition">POST PRODUCTION</a>
-  </div>
+ <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
+  <a href="/" className="hover:text-emerald-400 transition">HOME</a>
+  <a href="/about" className="hover:text-emerald-400 transition">ABOUT</a>
+  <a href="/pre-production" className="hover:text-emerald-400 transition">PRE-PRODUCTION</a>
+  <a href="/production" className="hover:text-emerald-400 transition">PRODUCTION</a>
+  <a href="/Post-Production" className="hover:text-emerald-400 transition">POST PRODUCTION</a>
+</div>
 </nav>
 
         {/* HEADER */}
