@@ -8,7 +8,7 @@ export default function FilmPage() {
       <div className="fixed inset-0 bg-black -z-20" />
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.10),transparent_60%)] -z-10" />
 
-      {/* NAV (FILM BUTTON REMOVED) */}
+      {/* NAV */}
       <nav className="sticky top-0 z-50 flex justify-between items-center px-8 py-6 border-b border-white/10 bg-black/90 backdrop-blur">
         <h1 className="tracking-[0.35em] text-sm text-gray-300">
           FILM PROJECT
@@ -22,7 +22,7 @@ export default function FilmPage() {
         </div>
       </nav>
 
-      {/* HEADER TEXT (KEPT) */}
+      {/* HEADER */}
       <section className="px-8 py-10 max-w-7xl mx-auto">
         <h1 className="text-5xl font-light">Featured Film</h1>
         <p className="text-gray-400 mt-4">
@@ -30,7 +30,7 @@ export default function FilmPage() {
         </p>
       </section>
 
-      {/* DOCUMENT BUTTONS */}
+      {/* DOCUMENT LINKS */}
       <section className="px-8 max-w-7xl mx-auto pb-10">
         <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.25em]">
 
@@ -70,31 +70,37 @@ export default function FilmPage() {
 
         <div className="grid md:grid-cols-3 gap-6">
 
-          {/* SCRIPT (VERTICAL THUMBNAIL) */}
-          <a href="/script.pdf" target="_blank" className="border border-white/10 bg-white/5 hover:border-emerald-400 transition">
-            <img
-              src="/script-thumb.jpg"
-              className="w-full h-80 object-cover"
-            />
-            <p className="p-3 text-sm text-gray-300">Script</p>
-          </a>
-
-          {/* PITCH */}
+          {/* PITCH (HORIZONTAL - SLIDES / VIDEO RATIO) */}
           <a href="/pitch.pdf" target="_blank" className="border border-white/10 bg-white/5 hover:border-emerald-400 transition">
-            <img
-              src="/pitch-thumb.jpg"
-              className="w-full h-48 object-cover"
-            />
+            <div className="aspect-video">
+              <img
+                src="/pitch-thumb.jpg"
+                className="w-full h-full object-cover"
+              />
+            </div>
             <p className="p-3 text-sm text-gray-300">Pitch Deck</p>
           </a>
 
-          {/* SHOT SHEET */}
+          {/* SHOT SHEET (HORIZONTAL - VIDEO RATIO) */}
           <a href="/shotsheet.pdf" target="_blank" className="border border-white/10 bg-white/5 hover:border-emerald-400 transition">
-            <img
-              src="/shotsheet-thumb.jpg"
-              className="w-full h-48 object-cover"
-            />
+            <div className="aspect-video">
+              <img
+                src="/shotsheet-thumb.jpg"
+                className="w-full h-full object-cover"
+              />
+            </div>
             <p className="p-3 text-sm text-gray-300">Shot Sheet</p>
+          </a>
+
+          {/* SCRIPT (TALL - DOCUMENT / GOOGLE DOC FEEL) */}
+          <a href="/script.pdf" target="_blank" className="border border-white/10 bg-white/5 hover:border-emerald-400 transition">
+            <div className="aspect-[3/4]">
+              <img
+                src="/script-thumb.jpg"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="p-3 text-sm text-gray-300">Script</p>
           </a>
 
         </div>
