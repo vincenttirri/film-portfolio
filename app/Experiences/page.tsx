@@ -108,8 +108,8 @@ export default function ExperiencesPage() {
             </p>
 
             <div className="grid grid-cols-2 gap-4">
-              <img src="EP3" className="h-64 w-full object-cover rounded border border-white/10" />
-              <img src="EP9" className="h-64 w-full object-cover rounded border border-white/10" />
+              <img src="EP3.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
+              <img src="EP9.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
             </div>
           </div>
         </div>
@@ -156,8 +156,8 @@ export default function ExperiencesPage() {
             </p>
 
             <div className="grid grid-cols-2 gap-4">
-              <img src="EP2.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
-              <img src="EP8.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
+              <img src="EP2 (1).jpg" className="h-64 w-full object-cover rounded border border-white/10" />
+              <img src="EP8 (1).jpg" className="h-64 w-full object-cover rounded border border-white/10" />
             </div>
           </div>
         </div>
