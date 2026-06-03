@@ -87,7 +87,7 @@ export default function PreProductionPage() {
         {/* NAV */}
        <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10 relative z-20">
   <h1 className="tracking-[0.35em] text-sm text-gray-300">
-    PRODUCTION ARCHIVE
+    VINCENT TIRRI
   </h1>
 
  <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">

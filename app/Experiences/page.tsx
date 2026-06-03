@@ -8,21 +8,21 @@ export default function ExperiencesPage() {
       <div className="fixed inset-0 bg-black -z-20" />
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.12),transparent_60%)] -z-10" />
 
-      {/* TOP NAV (SITE NAV) */}
-      <nav className="sticky top-0 z-50 flex justify-between items-center px-8 py-6 border-b border-white/10 bg-black/90 backdrop-blur">
-        <h1 className="tracking-[0.35em] text-sm text-gray-300">
-          EXPERIENCES
-        </h1>
+      {/* NAV */}
+        <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10 relative z-20">
+          <h1 className="tracking-[0.35em] text-sm text-gray-300">
+            VINCENT TIRRI
+          </h1>
 
-        <div className="flex flex-wrap gap-6 text-xs uppercase tracking-widest text-gray-400">
-          <a href="/">HOME</a>
-          <a href="/about">ABOUT</a>
-          <a href="/pre-production">PRE-PRODUCTION</a>
-          <a href="/production">PRODUCTION</a>
-          <a href="/Post-Production">POST</a>
-          <a href="/Experiences" className="text-emerald-400">EXPERIENCES</a>
-        </div>
-      </nav>
+          <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
+  <a href="/" className="hover:text-emerald-400 transition">HOME</a>
+  <a href="/about" className="hover:text-emerald-400 transition">ABOUT</a>
+  <a href="/pre-production" className="hover:text-emerald-400 transition">PRE-PRODUCTION</a>
+  <a href="/production" className="hover:text-emerald-400 transition">PRODUCTION</a>
+  <a href="/Post-Production" className="hover:text-emerald-400 transition">POST PRODUCTION</a>
+    <a href="/Experiences" className="hover:text-emerald-400 transition">EXPERIENCES</a>
+</div>
+        </nav>
 
       {/* HEADER */}
       <section className="px-8 py-12 max-w-7xl mx-auto">

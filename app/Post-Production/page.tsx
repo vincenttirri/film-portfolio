@@ -15,7 +15,7 @@ export default function PostProductionPage() {
       {/* NAV */}
       <nav className="flex justify-between items-center px-8 py-5 border-b border-white/10 relative z-20">
         <h1 className="tracking-[0.35em] text-sm text-gray-300">
-          POST PRODUCTION
+          VINCENT TIRRI
         </h1>
 
        <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
