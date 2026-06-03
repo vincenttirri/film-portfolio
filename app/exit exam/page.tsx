@@ -99,64 +99,202 @@ export default function ExitExamPage() {
 
       </section>
 
-      {/* DOCUMENTS */}
-      <section className="px-8 pb-20 max-w-6xl mx-auto relative z-10">
+           {/* DOCUMENT NAV */}
+      <section className="px-8 max-w-6xl mx-auto mb-10 relative z-10">
 
-        <h2 className="text-3xl font-light mb-8">
-          Production Documents
-        </h2>
+        <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.25em]">
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <a
+            href="#pitch"
+            className="px-3 py-2 border border-white/10 hover:border-emerald-400"
+          >
+            Pitch
+          </a>
 
-          {documents.map((doc) => (
-            <div
-              key={doc.title}
-              onClick={() => setActiveFile(doc)}
-              className="border border-white/10 hover:border-emerald-400 cursor-pointer bg-black/40 overflow-hidden"
-            >
-              <div className="h-[320px] overflow-hidden bg-black">
-                <img
-                  src={doc.thumb}
-                  alt={doc.title}
-                  className="w-full h-full object-contain hover:scale-105 transition duration-500"
-                />
-              </div>
+          <a
+            href="#script"
+            className="px-3 py-2 border border-white/10 hover:border-emerald-400"
+          >
+            Script
+          </a>
 
-              <div className="p-4">
+          <a
+            href="#shotsheet"
+            className="px-3 py-2 border border-white/10 hover:border-emerald-400"
+          >
+            Shot Sheet
+          </a>
 
-                <h3 className="text-lg font-light">
-                  {doc.title}
-                </h3>
-
-                <p className="text-xs text-gray-500 mt-1">
-                  Click to View
-                </p>
-
-              </div>
-
-            </div>
-          ))}
+          <a
+            href="#reflection"
+            className="px-3 py-2 border border-white/10 hover:border-emerald-400"
+          >
+            Reflection
+          </a>
 
         </div>
 
       </section>
 
-      {/* PDF VIEWER */}
-      {activeFile && (
-        <div
-          onClick={() => setActiveFile(null)}
-          className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-10"
-        >
-          <div className="w-full max-w-6xl h-[90vh] border border-white/20 bg-black">
+      {/* PITCH */}
+      <section
+        id="pitch"
+        className="px-8 pb-12 max-w-6xl mx-auto scroll-mt-24"
+      >
 
-            <iframe
-              src={activeFile.file}
-              className="w-full h-full"
+        <h2 className="text-3xl font-light mb-5">
+          Pitch Deck
+        </h2>
+
+        <div
+          onClick={() =>
+            setActiveFile({
+              title: 'Pitch Deck',
+              file: 'Exit Pitch.pdf',
+              thumb: 'Exit Pitch Thumb.jpg',
+            })
+          }
+          className="cursor-pointer border border-white/10 hover:border-emerald-400 overflow-hidden"
+        >
+
+          <img
+            src="Exit Pitch Thumb.jpg"
+            alt="Pitch"
+            className="w-full h-[320px] object-cover"
+          />
+
+          <div className="p-4">
+            <p className="text-gray-400">
+              Initial concept, project goals, audience, and production planning.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* SCRIPT */}
+      <section
+        id="script"
+        className="px-8 pb-12 max-w-6xl mx-auto scroll-mt-24"
+      >
+
+        <h2 className="text-3xl font-light mb-5">
+          Script
+        </h2>
+
+        <div
+          onClick={() =>
+            setActiveFile({
+              title: 'Script',
+              file: 'Exit Script.pdf',
+              thumb: 'Exit Script Thumb.jpg',
+            })
+          }
+          className="cursor-pointer border border-white/10 hover:border-emerald-400 overflow-hidden"
+        >
+
+          <div className="bg-black flex justify-center p-6">
+
+            <img
+              src="Exit Script Thumb.jpg"
+              alt="Script"
+              className="h-[500px] object-contain"
             />
 
           </div>
+
+          <div className="p-4">
+            <p className="text-gray-400">
+              Complete screenplay used during production.
+            </p>
+          </div>
+
         </div>
-      )}
+
+      </section>
+
+      {/* SHOT SHEET */}
+      <section
+        id="shotsheet"
+        className="px-8 pb-12 max-w-6xl mx-auto scroll-mt-24"
+      >
+
+        <h2 className="text-3xl font-light mb-5">
+          Shot Sheet
+        </h2>
+
+        <div
+          onClick={() =>
+            setActiveFile({
+              title: 'Shot Sheet',
+              file: 'Storyboard.pdf',
+              thumb: 'Storyboard Thumb.jpg',
+            })
+          }
+          className="cursor-pointer border border-white/10 hover:border-emerald-400 overflow-hidden"
+        >
+
+          <div className="bg-black flex justify-center p-6">
+
+            <img
+              src="Storyboard Thumb.jpg"
+              alt="Shot Sheet"
+              className="h-[500px] object-contain"
+            />
+
+          </div>
+
+          <div className="p-4">
+            <p className="text-gray-400">
+              Visual planning guide used throughout filming.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* REFLECTION */}
+      <section
+        id="reflection"
+        className="px-8 pb-20 max-w-6xl mx-auto scroll-mt-24"
+      >
+
+        <h2 className="text-3xl font-light mb-5">
+          Reflection Paper
+        </h2>
+
+        <div
+          onClick={() =>
+            setActiveFile({
+              title: 'Reflection',
+              file: 'Reflection Paper.pdf',
+              thumb: 'Reflection Thumb.jpg',
+            })
+          }
+          className="cursor-pointer border border-white/10 hover:border-emerald-400 overflow-hidden"
+        >
+
+          <div className="bg-black flex justify-center p-6">
+
+            <img
+              src="Reflection Thumb.jpg"
+              alt="Reflection"
+              className="h-[500px] object-contain"
+            />
+
+          </div>
+
+          <div className="p-4">
+            <p className="text-gray-400">
+              Analysis of the production process, lessons learned, and project outcomes.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
 
       {/* FOOTER */}
       <footer className="text-center text-[10px] tracking-[0.3em] text-gray-600 py-6 border-t border-white/10 relative z-10">
