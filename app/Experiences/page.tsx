@@ -21,6 +21,7 @@ export default function ExperiencesPage() {
   <a href="/production" className="hover:text-emerald-400 transition">PRODUCTION</a>
   <a href="/Post-Production" className="hover:text-emerald-400 transition">POST PRODUCTION</a>
     <a href="/Experiences" className="hover:text-emerald-400 transition">EXPERIENCES</a>
+          <a href="/exit exam" className="text-emerald-400">EXIT EXAM</a>
 </div>
         </nav>
 
