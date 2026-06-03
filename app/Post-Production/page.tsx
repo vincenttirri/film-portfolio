@@ -12,22 +12,42 @@ export default function PostProductionPage() {
       <div className="fixed inset-0 bg-black" />
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.10),transparent_60%)] pointer-events-none" />
 
-     {/* NAV */}
-        <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10 relative z-20">
-          <h1 className="tracking-[0.35em] text-sm text-gray-300">
-            VINCENT TIRRI
-          </h1>
+      {/* NAV */}
+<nav className="flex justify-between items-center px-8 py-6 border-b border-white/10 relative z-20">
+  <h1 className="tracking-[0.35em] text-sm text-gray-300">
+    VINCENT TIRRI
+  </h1>
 
-          <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
-  <a href="/" className="hover:text-emerald-400 transition">HOME</a>
-  <a href="/about" className="hover:text-emerald-400 transition">ABOUT</a>
-  <a href="/pre-production" className="hover:text-emerald-400 transition">PRE-PRODUCTION</a>
-  <a href="/production" className="hover:text-emerald-400 transition">PRODUCTION</a>
-  <a href="/Post-Production" className="hover:text-emerald-400 transition">POST PRODUCTION</a>
-    <a href="/Experiences" className="hover:text-emerald-400 transition">EXPERIENCES</a>
-          <a href="/exit exam" className="text-emerald-400">EXIT EXAM</a>
-</div>
-        </nav>
+  <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
+    <a href="/" className="hover:text-emerald-400 transition">
+      HOME
+    </a>
+
+    <a href="/about" className="hover:text-emerald-400 transition">
+      ABOUT
+    </a>
+
+    <a href="/pre-production" className="hover:text-emerald-400 transition">
+      PRE-PRODUCTION
+    </a>
+
+    <a href="/production" className="hover:text-emerald-400 transition">
+      PRODUCTION
+    </a>
+
+    <a href="/Post-Production" className="hover:text-emerald-400 transition">
+      POST PRODUCTION
+    </a>
+
+    <a href="/Experiences" className="hover:text-emerald-400 transition">
+      EXPERIENCES
+    </a>
+
+    <a href="/exit exam" className="hover:text-emerald-400 transition">
+      EXIT EXAM
+    </a>
+  </div>
+</nav>
 
       {/* HEADER */}
       <section className="px-8 py-6 max-w-7xl mx-auto relative z-10">
