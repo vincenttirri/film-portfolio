@@ -8,7 +8,7 @@ export default function FilmPage() {
       <div className="fixed inset-0 bg-black -z-20" />
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.10),transparent_60%)] -z-10" />
 
-      {/* NAV */}
+      {/* NAV (FILM BUTTON REMOVED) */}
       <nav className="sticky top-0 z-50 flex justify-between items-center px-8 py-6 border-b border-white/10 bg-black/90 backdrop-blur">
         <h1 className="tracking-[0.35em] text-sm text-gray-300">
           FILM PROJECT
@@ -22,7 +22,7 @@ export default function FilmPage() {
         </div>
       </nav>
 
-      {/* TITLE */}
+      {/* HEADER TEXT (KEPT) */}
       <section className="px-8 py-10 max-w-7xl mx-auto">
         <h1 className="text-5xl font-light">Featured Film</h1>
         <p className="text-gray-400 mt-4">
@@ -30,13 +30,9 @@ export default function FilmPage() {
         </p>
       </section>
 
-      {/* DOCUMENT NAV BUTTONS (MOVED ABOVE VIDEO — FIXED) */}
-      <section className="px-8 max-w-7xl mx-auto pb-8">
+      {/* DOCUMENT BUTTONS */}
+      <section className="px-8 max-w-7xl mx-auto pb-10">
         <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.25em]">
-
-          <a href="#video" className="px-3 py-2 border border-white/10 hover:border-emerald-400">
-            Film
-          </a>
 
           <a href="/pitch.pdf" target="_blank" className="px-3 py-2 border border-white/10 hover:border-emerald-400">
             Pitch
@@ -54,7 +50,7 @@ export default function FilmPage() {
       </section>
 
       {/* VIDEO */}
-      <section id="video" className="px-8 max-w-7xl mx-auto pb-12">
+      <section className="px-8 max-w-7xl mx-auto pb-12">
         <div className="aspect-video border border-white/10">
           <iframe
             className="w-full h-full"
@@ -65,7 +61,7 @@ export default function FilmPage() {
         </div>
       </section>
 
-      {/* THUMBNAILS (FIXED PDF COVERS) */}
+      {/* THUMBNAILS */}
       <section className="px-8 max-w-7xl mx-auto pb-20">
 
         <h2 className="text-2xl text-emerald-400 mb-6">
@@ -74,16 +70,16 @@ export default function FilmPage() {
 
         <div className="grid md:grid-cols-3 gap-6">
 
-          {/* SCRIPT */}
+          {/* SCRIPT (VERTICAL THUMBNAIL) */}
           <a href="/script.pdf" target="_blank" className="border border-white/10 bg-white/5 hover:border-emerald-400 transition">
             <img
               src="/script-thumb.jpg"
-              className="w-full h-48 object-cover"
+              className="w-full h-80 object-cover"
             />
             <p className="p-3 text-sm text-gray-300">Script</p>
           </a>
 
-          {/* PITCH (HORIZONTAL THUMBNAIL STYLE) */}
+          {/* PITCH */}
           <a href="/pitch.pdf" target="_blank" className="border border-white/10 bg-white/5 hover:border-emerald-400 transition">
             <img
               src="/pitch-thumb.jpg"
@@ -92,7 +88,7 @@ export default function FilmPage() {
             <p className="p-3 text-sm text-gray-300">Pitch Deck</p>
           </a>
 
-          {/* SHOT SHEET (HORIZONTAL THUMBNAIL STYLE) */}
+          {/* SHOT SHEET */}
           <a href="/shotsheet.pdf" target="_blank" className="border border-white/10 bg-white/5 hover:border-emerald-400 transition">
             <img
               src="/shotsheet-thumb.jpg"
