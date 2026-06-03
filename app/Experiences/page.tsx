@@ -68,16 +68,16 @@ export default function ExperiencesPage() {
 
         {/* INTERNSHIPS */}
         <div id="internships" className="border border-white/10 bg-white/5 p-6 rounded-xl">
-          <h2 className="text-2xl text-emerald-400 mb-4">Internships / Shop Experiences</h2>
+          <h2 className="text-2xl text-emerald-400 mb-4">Internships</h2>
 
           <div className="grid md:grid-cols-2 gap-6 items-center">
             <p className="text-gray-400 leading-relaxed">
-              I participated in internship and shop production experiences where I worked on filming, editing, and assisting real productions outside the studio.
+              Junior year of my highschool jourey, I was chosen to participate in the Co-op internship program at PCTVS. During this year, I gained numerous skills sucha as camera operating for live production, spotlighting, interviewing, and other technical credibilities. Using these new skills I have particpated in the production of multiple live events, a musical, and our stuednt of the month videos. I have lerned how to sue more technology and how to tak care of equipment, useful for future job experiences I may have. Overall, this unpaid internship, which will become paid next year, has given me the true experience of working in the film industry.
             </p>
 
             <div className="grid grid-cols-2 gap-4">
-              <img src="/internship1.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
-              <img src="/internship2.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
+              <img src="EP6.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
+              <img src="EP7.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
             </div>
           </div>
         </div>
@@ -88,12 +88,12 @@ export default function ExperiencesPage() {
 
           <div className="grid md:grid-cols-2 gap-6 items-center">
             <p className="text-gray-400 leading-relaxed">
-              I filmed outside the classroom in real environments and learned to adapt to lighting, movement, and real-world production conditions.
+              During the course of being in the Audio/Visual production I have been a part of mny field trips. A notable trip was going to Record High and learning about mixing live performences. Furthermore, I ahve also ahd the honor of attending the first two New Jersey Film Expos where I lerned how to netwrk and discover job opputunities for my future. Additional to field trips, I have done off campus filming multiple times. I have shot music vieos, documenteries, commercials, and personal projects. This tought me ho to locaiton scout and use iverse equipment and situations to my advantage even wwhen negative at first glance.
             </p>
 
             <div className="grid grid-cols-2 gap-4">
-              <img src="/fieldtrip1.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
-              <img src="/fieldtrip2.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
+              <img src="EP4.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
+              <img src="EP5.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
             </div>
           </div>
         </div>
@@ -104,12 +104,12 @@ export default function ExperiencesPage() {
 
           <div className="grid md:grid-cols-2 gap-6 items-center">
             <p className="text-gray-400 leading-relaxed">
-              I worked as Director, Editor, Cinematographer, Writer, Sound Recordist, and Colorist across multiple productions.
+              Throughout my time working in productions, I have been abl to find my voice in many different ares of film. I find that my strongest and most repeitive role is director. With my ability to effictively collaborate and work a team, this role has become a highlight of my journey as an aspiring filmmaker. Addiitonally, however, I have also worked as a colorist, camera operator, audio mixer, and writer. My other strongest voice is in color, but I find myself growing in other areas as well.
             </p>
 
             <div className="grid grid-cols-2 gap-4">
-              <img src="/role1.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
-              <img src="/role2.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
+              <img src="EP3" className="h-64 w-full object-cover rounded border border-white/10" />
+              <img src="EP9" className="h-64 w-full object-cover rounded border border-white/10" />
             </div>
           </div>
         </div>
@@ -120,28 +120,28 @@ export default function ExperiencesPage() {
 
           <div className="grid md:grid-cols-2 gap-6 items-center">
             <p className="text-gray-400 leading-relaxed">
-              Adobe Premiere Pro, After Effects, Audition, Photoshop, and Eventually Rundown Creator.
+              I have been able to grow my tecnical skills in the software I have used in this program. I have utulized adobe software such as Premiere, After Effects, and AUdition to create films on an industry standard. I also have an understanding of Davinci Resolve's free studio version that I have pursued on my own. Aditionally, I have used collaborative audio mixing programs such as Soundtrap to further my understaanding of producing music and audio effects. 
             </p>
 
             <div className="grid grid-cols-2 gap-4">
-              <img src="/software1.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
-              <img src="/software2.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
+              <img src="AEP.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
+              <img src="DREP.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
             </div>
           </div>
         </div>
 
         {/* EQUIPMENT */}
         <div id="equipment" className="border border-white/10 bg-white/5 p-6 rounded-xl">
-          <h2 className="text-2xl text-emerald-400 mb-4">Equipment / Cameras</h2>
+          <h2 className="text-2xl text-emerald-400 mb-4">Equipment</h2>
 
           <div className="grid md:grid-cols-2 gap-6 items-center">
             <p className="text-gray-400 leading-relaxed">
-              Canon XA60, Sony PXW-Z90, DSLR cameras, microphones, lighting kits, and tripods.
+              I have been fortunate to work with multiple types of equipment throughout my experience in the video production program. Cameras and camera tech incldude the Fx3, Fx6, Fx9, Panasonic HC-X1000 4K Ultraa HD Camcorder. Autocue Teleprompter, GY-HC900STU Studio Camera Rig, 4K Panasonic PTZ Camera, Canon EOS R50 Mirrorles Camera, DJI Ronin-S Standard, and Panasonic AG-CX350 Pro Camcorder. Furthermore, I have used other tech including the Blackmagic Design ATEM Television Studio HD8, Mac Studio, and ETC ColorSource AV Lighting Console. Finally, audio equipment I have used includes the Yamaha TF-1 Audio Mixer, Zoom PodTrak P4 Zoom Recorder, and the RODECaster Pro II.
             </p>
 
             <div className="grid grid-cols-2 gap-4">
-              <img src="/camera1.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
-              <img src="/camera2.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
+              <img src="EP1.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
+              <img src="EP10.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
             </div>
           </div>
         </div>
@@ -152,12 +152,12 @@ export default function ExperiencesPage() {
 
           <div className="grid md:grid-cols-2 gap-6 items-center">
             <p className="text-gray-400 leading-relaxed">
-              I earned a Bronze Medal in SkillsUSA Digital Cinema State Competition for my film “Everything Above.”
+              In 2025, I had earned a Bronze Medal in the SkillsUSA Digital Cinema State Competition for my film “RADIOWORLD." This film was made undr criteria of being a broad 7 minute short film of any genre or prompt. Competing against twelve other teams of two, we placed third, scoring a 95 out of 100 on the rubric. THis award shows the true ahrd work, dedication, nd crative storytelling that went into the process of planning, producing, and editing the short film. 
             </p>
 
             <div className="grid grid-cols-2 gap-4">
-              <img src="/skillsusa-medal.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
-              <img src="/award2.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
+              <img src="EP2.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
+              <img src="EP8.jpg" className="h-64 w-full object-cover rounded border border-white/10" />
             </div>
           </div>
         </div>
