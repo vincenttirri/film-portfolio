@@ -2,110 +2,225 @@
 
 export default function FilmPage() {
   return (
-    <main className="min-h-screen bg-black text-white font-sans">
+    <main className="min-h-screen bg-black text-white font-sans relative overflow-hidden">
 
       {/* BACKGROUND */}
-      <div className="fixed inset-0 bg-black -z-20" />
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.10),transparent_60%)] -z-10" />
+      <div className="fixed inset-0 bg-black" />
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.10),transparent_60%)] pointer-events-none" />
 
       {/* NAV */}
-      <nav className="sticky top-0 z-50 flex justify-between items-center px-8 py-6 border-b border-white/10 bg-black/90 backdrop-blur">
+      <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10 relative z-20">
         <h1 className="tracking-[0.35em] text-sm text-gray-300">
           FILM PROJECT
         </h1>
 
-        <div className="flex flex-wrap gap-6 text-xs uppercase tracking-widest text-gray-400">
+        <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
           <a href="/">HOME</a>
           <a href="/about">ABOUT</a>
+          <a href="/pre-production">PRE-PRODUCTION</a>
           <a href="/production">PRODUCTION</a>
-          <a href="/post-production">POST</a>
+          <a href="/Post-Production">POST PRODUCTION</a>
+          <a href="/Experiences">EXPERIENCES</a>
+          <a href="/exit-exam" className="text-emerald-400">
+            EXIT EXAM
+          </a>
         </div>
       </nav>
 
       {/* HEADER */}
-      <section className="px-8 py-10 max-w-7xl mx-auto">
-        <h1 className="text-5xl font-light">Featured Film</h1>
-        <p className="text-gray-400 mt-4">
-          Script, Pitch, Shot Sheet, and Final Film Documentation
+      <section className="px-8 py-10 max-w-6xl mx-auto relative z-10">
+
+        <p className="text-xs tracking-[0.4em] text-emerald-400 uppercase">
+          Complete Individual Production
         </p>
+
+        <h1 className="text-5xl font-light mt-3">
+          The Sanctuary For All
+        </h1>
+
+        <p className="text-gray-400 mt-5 max-w-3xl">
+          This project documents the entire production process from
+          concept development through post-production. Included are
+          the original pitch deck, screenplay, shot planning
+          materials, final film, and reflection documents used
+          throughout the project.
+        </p>
+
       </section>
 
-      {/* DOCUMENT LINKS */}
-      <section className="px-8 max-w-7xl mx-auto pb-10">
+      {/* QUICK LINKS */}
+      <section className="px-8 max-w-6xl mx-auto mb-8">
+
         <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.25em]">
 
-          <a href="/pitch.pdf" target="_blank" className="px-3 py-2 border border-white/10 hover:border-emerald-400">
+          <a
+            href="/pitch.pdf"
+            target="_blank"
+            className="px-3 py-2 border border-white/10 hover:border-emerald-400"
+          >
             Pitch
           </a>
 
-          <a href="/shotsheet.pdf" target="_blank" className="px-3 py-2 border border-white/10 hover:border-emerald-400">
-            Shot Sheet
-          </a>
-
-          <a href="/script.pdf" target="_blank" className="px-3 py-2 border border-white/10 hover:border-emerald-400">
+          <a
+            href="/script.pdf"
+            target="_blank"
+            className="px-3 py-2 border border-white/10 hover:border-emerald-400"
+          >
             Script
           </a>
 
+          <a
+            href="/shotsheet.pdf"
+            target="_blank"
+            className="px-3 py-2 border border-white/10 hover:border-emerald-400"
+          >
+            Shot Sheet
+          </a>
+
         </div>
+
       </section>
 
-      {/* VIDEO */}
-      <section className="px-8 max-w-7xl mx-auto pb-12">
+      {/* FEATURED FILM */}
+      <section className="px-8 pb-12 max-w-6xl mx-auto">
+
+        <h2 className="text-3xl font-light mb-6">
+          Final Production
+        </h2>
+
         <div className="aspect-video border border-white/10">
+
           <iframe
-            className="w-full h-full"
             src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-            title="Featured Film"
+            className="w-full h-full"
             allowFullScreen
           />
+
         </div>
+
       </section>
 
-      {/* THUMBNAILS */}
-      <section className="px-8 max-w-7xl mx-auto pb-20">
+      {/* DOCUMENTS */}
+      <section className="px-8 pb-20 max-w-6xl mx-auto">
 
-        <h2 className="text-2xl text-emerald-400 mb-6">
+        <h2 className="text-3xl font-light mb-8">
           Production Documents
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="space-y-8">
 
-          {/* PITCH (HORIZONTAL - SLIDES / VIDEO RATIO) */}
-          <a href="/pitch.pdf" target="_blank" className="border border-white/10 bg-white/5 hover:border-emerald-400 transition">
-            <div className="aspect-video">
+          {/* PITCH */}
+          <a
+            href="/pitch.pdf"
+            target="_blank"
+            className="grid md:grid-cols-[320px_1fr] gap-6 border border-white/10 hover:border-emerald-400 transition p-4"
+          >
+
+            <div className="aspect-video overflow-hidden">
               <img
                 src="/pitch-thumb.jpg"
+                alt="Pitch"
                 className="w-full h-full object-cover"
               />
             </div>
-            <p className="p-3 text-sm text-gray-300">Pitch Deck</p>
-          </a>
 
-          {/* SHOT SHEET (HORIZONTAL - VIDEO RATIO) */}
-          <a href="/shotsheet.pdf" target="_blank" className="border border-white/10 bg-white/5 hover:border-emerald-400 transition">
-            <div className="aspect-video">
-              <img
-                src="/shotsheet-thumb.jpg"
-                className="w-full h-full object-cover"
-              />
+            <div className="flex flex-col justify-center">
+
+              <p className="text-xs uppercase tracking-[0.3em] text-emerald-400">
+                Development
+              </p>
+
+              <h3 className="text-2xl font-light mt-2">
+                Pitch Deck
+              </h3>
+
+              <p className="text-gray-400 mt-3">
+                Original proposal outlining the documentary concept,
+                target audience, goals, and production approach.
+              </p>
+
             </div>
-            <p className="p-3 text-sm text-gray-300">Shot Sheet</p>
+
           </a>
 
-          {/* SCRIPT (TALL - DOCUMENT / GOOGLE DOC FEEL) */}
-          <a href="/script.pdf" target="_blank" className="border border-white/10 bg-white/5 hover:border-emerald-400 transition">
-            <div className="aspect-[3/4]">
+          {/* SCRIPT */}
+          <a
+            href="/script.pdf"
+            target="_blank"
+            className="grid md:grid-cols-[220px_1fr] gap-6 border border-white/10 hover:border-emerald-400 transition p-4"
+          >
+
+            <div className="aspect-[3/4] overflow-hidden">
               <img
                 src="/script-thumb.jpg"
+                alt="Script"
                 className="w-full h-full object-cover"
               />
             </div>
-            <p className="p-3 text-sm text-gray-300">Script</p>
+
+            <div className="flex flex-col justify-center">
+
+              <p className="text-xs uppercase tracking-[0.3em] text-emerald-400">
+                Screenplay
+              </p>
+
+              <h3 className="text-2xl font-light mt-2">
+                Production Script
+              </h3>
+
+              <p className="text-gray-400 mt-3">
+                Complete screenplay used during filming,
+                including interview planning, narration,
+                and scene structure.
+              </p>
+
+            </div>
+
+          </a>
+
+          {/* SHOT SHEET */}
+          <a
+            href="/shotsheet.pdf"
+            target="_blank"
+            className="grid md:grid-cols-[320px_1fr] gap-6 border border-white/10 hover:border-emerald-400 transition p-4"
+          >
+
+            <div className="aspect-video overflow-hidden">
+              <img
+                src="/shotsheet-thumb.jpg"
+                alt="Shot Sheet"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="flex flex-col justify-center">
+
+              <p className="text-xs uppercase tracking-[0.3em] text-emerald-400">
+                Planning
+              </p>
+
+              <h3 className="text-2xl font-light mt-2">
+                Shot Sheet
+              </h3>
+
+              <p className="text-gray-400 mt-3">
+                Camera planning document detailing framing,
+                movement, coverage requirements, and
+                production logistics.
+              </p>
+
+            </div>
+
           </a>
 
         </div>
 
       </section>
+
+      {/* FOOTER */}
+      <footer className="text-center text-[10px] tracking-[0.3em] text-gray-600 py-6 border-t border-white/10">
+        EXIT EXAM ARCHIVE SYSTEM
+      </footer>
 
     </main>
   );
