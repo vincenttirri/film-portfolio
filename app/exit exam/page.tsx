@@ -1,6 +1,39 @@
 'use client';
 
-export default function FilmPage() {
+import { useState } from 'react';
+
+type Asset = {
+  title: string;
+  file: string;
+  thumb: string;
+};
+
+export default function ExitExamPage() {
+  const [activeFile, setActiveFile] = useState<Asset | null>(null);
+
+  const documents: Asset[] = [
+    {
+      title: 'Pitch Deck',
+      file: 'Exit Pitch.pdf',
+      thumb: 'Exit Pitch Thumb.jpg',
+    },
+    {
+      title: 'Script',
+      file: 'Exit Script.pdf',
+      thumb: 'Exit Script Thumb.jpg',
+    },
+    {
+      title: 'Shot Sheet',
+      file: 'Storyboard.pdf',
+      thumb: 'Storyboard Thumb.jpg',
+    },
+    {
+      title: 'Reflection Paper',
+      file: 'Reflection Paper.pdf',
+      thumb: 'Reflection Thumb.jpg',
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-black text-white font-sans relative overflow-hidden">
 
@@ -11,27 +44,25 @@ export default function FilmPage() {
       {/* NAV */}
       <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10 relative z-20">
         <h1 className="tracking-[0.35em] text-sm text-gray-300">
-          FILM PROJECT
+          VINCENT TIRRI
         </h1>
 
         <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
-          <a href="/">HOME</a>
-          <a href="/about">ABOUT</a>
-          <a href="/pre-production">PRE-PRODUCTION</a>
-          <a href="/production">PRODUCTION</a>
-          <a href="/Post-Production">POST PRODUCTION</a>
-          <a href="/Experiences">EXPERIENCES</a>
-          <a href="/exit-exam" className="text-emerald-400">
-            EXIT EXAM
-          </a>
+          <a href="/" className="hover:text-emerald-400 transition">HOME</a>
+          <a href="/about" className="hover:text-emerald-400 transition">ABOUT</a>
+          <a href="/pre-production" className="hover:text-emerald-400 transition">PRE-PRODUCTION</a>
+          <a href="/production" className="hover:text-emerald-400 transition">PRODUCTION</a>
+          <a href="/Post-Production" className="hover:text-emerald-400 transition">POST PRODUCTION</a>
+          <a href="/Experiences" className="hover:text-emerald-400 transition">EXPERIENCES</a>
+          <a href="/exit-exam" className="text-emerald-400">EXIT EXAM</a>
         </div>
       </nav>
 
       {/* HEADER */}
-      <section className="px-8 py-10 max-w-6xl mx-auto relative z-10">
+      <section className="relative z-10 px-8 py-12 max-w-6xl mx-auto">
 
-        <p className="text-xs tracking-[0.4em] text-emerald-400 uppercase">
-          Complete Individual Production
+        <p className="text-xs tracking-[0.4em] text-gray-500 uppercase">
+          Exit Exam Portfolio
         </p>
 
         <h1 className="text-5xl font-light mt-3">
@@ -39,186 +70,122 @@ export default function FilmPage() {
         </h1>
 
         <p className="text-gray-400 mt-5 max-w-3xl">
-          This project documents the entire production process from
-          concept development through post-production. Included are
-          the original pitch deck, screenplay, shot planning
-          materials, final film, and reflection documents used
-          throughout the project.
+          This project represents a complete production workflow from
+          concept development through post-production. Included are the
+          original pitch materials, screenplay, shot planning documents,
+          final film, and written reflection documenting the creative
+          process and lessons learned throughout production.
         </p>
 
       </section>
 
-      {/* QUICK LINKS */}
-      <section className="px-8 max-w-6xl mx-auto mb-8">
+      {/* DOCUMENT NAV */}
+      <section className="relative z-10 px-8 max-w-6xl mx-auto mb-10">
 
         <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.25em]">
 
-          <a
-            href="/pitch.pdf"
-            target="_blank"
-            className="px-3 py-2 border border-white/10 hover:border-emerald-400"
-          >
-            Pitch
-          </a>
-
-          <a
-            href="/script.pdf"
-            target="_blank"
-            className="px-3 py-2 border border-white/10 hover:border-emerald-400"
-          >
-            Script
-          </a>
-
-          <a
-            href="/shotsheet.pdf"
-            target="_blank"
-            className="px-3 py-2 border border-white/10 hover:border-emerald-400"
-          >
-            Shot Sheet
-          </a>
+          {documents.map((doc) => (
+            <button
+              key={doc.title}
+              onClick={() => setActiveFile(doc)}
+              className="px-4 py-2 border border-white/10 hover:border-emerald-400 transition"
+            >
+              {doc.title}
+            </button>
+          ))}
 
         </div>
 
       </section>
 
       {/* FEATURED FILM */}
-      <section className="px-8 pb-12 max-w-6xl mx-auto">
+      <section className="relative z-10 px-8 max-w-6xl mx-auto">
 
-        <h2 className="text-3xl font-light mb-6">
+        <p className="text-emerald-400 text-xs tracking-[0.4em] uppercase">
           Final Production
+        </p>
+
+        <h2 className="text-3xl font-light mt-2">
+          The Sanctuary For All
         </h2>
 
-        <div className="aspect-video border border-white/10">
+        <p className="text-gray-400 mt-3 max-w-2xl">
+          A documentary exploring community, faith, and service through
+          interviews and observational storytelling.
+        </p>
 
+        <div className="mt-6 aspect-video border border-white/10">
           <iframe
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+            src="https://www.youtube.com/embed/VIDEO_ID_HERE"
             className="w-full h-full"
             allowFullScreen
           />
-
         </div>
 
       </section>
 
       {/* DOCUMENTS */}
-      <section className="px-8 pb-20 max-w-6xl mx-auto">
+      <section className="relative z-10 px-8 py-12 max-w-6xl mx-auto">
 
         <h2 className="text-3xl font-light mb-8">
           Production Documents
         </h2>
 
-        <div className="space-y-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-          {/* PITCH */}
-          <a
-            href="/pitch.pdf"
-            target="_blank"
-            className="grid md:grid-cols-[320px_1fr] gap-6 border border-white/10 hover:border-emerald-400 transition p-4"
-          >
+          {documents.map((doc) => (
+            <div
+              key={doc.title}
+              onClick={() => setActiveFile(doc)}
+              className="cursor-pointer border border-white/10 hover:border-emerald-400 bg-black/40 overflow-hidden transition"
+            >
 
-            <div className="aspect-video overflow-hidden">
-              <img
-                src="/pitch-thumb.jpg"
-                alt="Pitch"
-                className="w-full h-full object-cover"
-              />
-            </div>
+              <div
+                className={
+                  doc.title === 'Script'
+                    ? 'aspect-[3/4]'
+                    : 'aspect-video'
+                }
+              >
+                <img
+                  src={doc.thumb}
+                  alt={doc.title}
+                  className="w-full h-full object-cover hover:scale-105 transition duration-500"
+                />
+              </div>
 
-            <div className="flex flex-col justify-center">
-
-              <p className="text-xs uppercase tracking-[0.3em] text-emerald-400">
-                Development
-              </p>
-
-              <h3 className="text-2xl font-light mt-2">
-                Pitch Deck
-              </h3>
-
-              <p className="text-gray-400 mt-3">
-                Original proposal outlining the documentary concept,
-                target audience, goals, and production approach.
-              </p>
+              <div className="p-3">
+                <h3 className="text-sm font-light">
+                  {doc.title}
+                </h3>
+              </div>
 
             </div>
-
-          </a>
-
-          {/* SCRIPT */}
-          <a
-            href="/script.pdf"
-            target="_blank"
-            className="grid md:grid-cols-[220px_1fr] gap-6 border border-white/10 hover:border-emerald-400 transition p-4"
-          >
-
-            <div className="aspect-[3/4] overflow-hidden">
-              <img
-                src="/script-thumb.jpg"
-                alt="Script"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <div className="flex flex-col justify-center">
-
-              <p className="text-xs uppercase tracking-[0.3em] text-emerald-400">
-                Screenplay
-              </p>
-
-              <h3 className="text-2xl font-light mt-2">
-                Production Script
-              </h3>
-
-              <p className="text-gray-400 mt-3">
-                Complete screenplay used during filming,
-                including interview planning, narration,
-                and scene structure.
-              </p>
-
-            </div>
-
-          </a>
-
-          {/* SHOT SHEET */}
-          <a
-            href="/shotsheet.pdf"
-            target="_blank"
-            className="grid md:grid-cols-[320px_1fr] gap-6 border border-white/10 hover:border-emerald-400 transition p-4"
-          >
-
-            <div className="aspect-video overflow-hidden">
-              <img
-                src="/shotsheet-thumb.jpg"
-                alt="Shot Sheet"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <div className="flex flex-col justify-center">
-
-              <p className="text-xs uppercase tracking-[0.3em] text-emerald-400">
-                Planning
-              </p>
-
-              <h3 className="text-2xl font-light mt-2">
-                Shot Sheet
-              </h3>
-
-              <p className="text-gray-400 mt-3">
-                Camera planning document detailing framing,
-                movement, coverage requirements, and
-                production logistics.
-              </p>
-
-            </div>
-
-          </a>
+          ))}
 
         </div>
 
       </section>
 
+      {/* PDF VIEWER */}
+      {activeFile && (
+        <div
+          onClick={() => setActiveFile(null)}
+          className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-10"
+        >
+          <div className="w-full max-w-6xl h-[90vh] border border-white/20 bg-black">
+
+            <iframe
+              src={activeFile.file}
+              className="w-full h-full"
+            />
+
+          </div>
+        </div>
+      )}
+
       {/* FOOTER */}
-      <footer className="text-center text-[10px] tracking-[0.3em] text-gray-600 py-6 border-t border-white/10">
+      <footer className="relative z-10 text-center text-[10px] tracking-[0.3em] text-gray-600 py-6 border-t border-white/10">
         EXIT EXAM ARCHIVE SYSTEM
       </footer>
 
