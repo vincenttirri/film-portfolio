@@ -14,23 +14,23 @@ export default function ExitExamPage() {
   const documents: Asset[] = [
     {
       title: 'Pitch Deck',
-      file: 'Exit Pitch.pdf',
-      thumb: 'Exit Pitch Thumb.jpg',
+      file: 'The Sanctuay for All.pdf',
+      thumb: 'Sanctuary Thumb.jpg',
     },
     {
       title: 'Script',
-      file: 'Exit Script.pdf',
-      thumb: 'Exit Script Thumb.jpg',
+      file: 'Sanctuary script.pdf',
+      thumb: 'Sanctuary script_page-0001.jpg',
     },
     {
       title: 'Shot Sheet',
-      file: 'Storyboard.pdf',
-      thumb: 'Storyboard Thumb.jpg',
+      file: 'TSFA SL.pdf',
+      thumb: 'SL thumb.jpg',
     },
     {
       title: 'Reflection Paper',
-      file: 'Reflection Paper.pdf',
-      thumb: 'Reflection Thumb.jpg',
+      file: 'Reflection paper.pdf',
+      thumb: 'Reflection paper_page-0001.jpg',
     },
   ];
 
@@ -116,7 +116,7 @@ export default function ExitExamPage() {
 
         <div className="mt-6 aspect-video border border-white/10">
           <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+            src="https://www.youtube.com/embed/tdCZIEcx7uc"
             className="w-full h-full"
             allowFullScreen
           />
