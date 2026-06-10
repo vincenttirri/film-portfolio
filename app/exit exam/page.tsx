@@ -195,23 +195,13 @@ export default function ExitExamPage() {
             through interviews and observational storytelling.
           </p>
 
-          {/* FILM THUMBNAIL */}
-          <div className="mt-6 border border-white/10 overflow-hidden">
-
-            <img
-              src="Film Thumbnail.jpg"
-              alt="Film Thumbnail"
-              className="w-full aspect-video object-cover"
-            />
-
-          </div>
-
-          {/* VIDEO */}
-          <div className="mt-6 aspect-video border border-white/10">
+          <div className="mt-6 aspect-video border border-white/10 overflow-hidden">
 
             <iframe
-              src="https://www.youtube.com/embed/tdCZIEcx7uc"
+              src="https://www.youtube.com/embed/tdCZIEcx7uc?rel=0"
+              title="The Sanctuary For All"
               className="w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
 
@@ -222,14 +212,11 @@ export default function ExitExamPage() {
         {/* DOCUMENTS */}
         <section className="px-8 py-14 max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
 
-          {/* PLANNING DOCUMENTS */}
           <div className="border border-white/10 p-6">
 
-            <div className="mb-5">
-              <h2 className="text-2xl font-light">
-                Planning Documents
-              </h2>
-            </div>
+            <h2 className="text-2xl font-light mb-5">
+              Planning Documents
+            </h2>
 
             <div className="flex gap-4 overflow-x-auto pb-3">
 
@@ -248,9 +235,6 @@ export default function ExitExamPage() {
 
                   <div className="p-3">
                     <p className="text-sm">{item.title}</p>
-                    <p className="text-xs text-gray-500">
-                      Production Planning
-                    </p>
                   </div>
 
                 </div>
@@ -260,14 +244,11 @@ export default function ExitExamPage() {
 
           </div>
 
-          {/* WRITTEN DOCUMENTS */}
           <div className="border border-white/10 p-6">
 
-            <div className="mb-5">
-              <h2 className="text-2xl font-light">
-                Written Documents
-              </h2>
-            </div>
+            <h2 className="text-2xl font-light mb-5">
+              Written Documents
+            </h2>
 
             <div className="flex gap-4 overflow-x-auto pb-3">
 
@@ -278,7 +259,7 @@ export default function ExitExamPage() {
                   className="min-w-[220px] cursor-pointer border border-white/10 hover:border-emerald-400/50 transition bg-black/40"
                 >
 
-                  <div className="h-[320px] w-full bg-black overflow-hidden">
+                  <div className="h-[320px] overflow-hidden">
 
                     <img
                       src={item.thumb}
@@ -290,9 +271,6 @@ export default function ExitExamPage() {
 
                   <div className="p-3">
                     <p className="text-sm">{item.title}</p>
-                    <p className="text-xs text-gray-500">
-                      PDF Document
-                    </p>
                   </div>
 
                 </div>
@@ -304,7 +282,7 @@ export default function ExitExamPage() {
 
         </section>
 
-        {/* PDF VIEWER */}
+        {/* FULLSCREEN VIEWER */}
         {activeFile && (
           <div
             onClick={() => setActiveFile(null)}
@@ -312,17 +290,10 @@ export default function ExitExamPage() {
           >
             <div className="w-full max-w-5xl h-[90vh] border border-white/20 bg-black">
 
-              {activeFile.type === 'pdf' ? (
-                <iframe
-                  src={activeFile.file}
-                  className="w-full h-full"
-                />
-              ) : (
-                <img
-                  src={activeFile.file}
-                  className="w-full h-full object-contain"
-                />
-              )}
+              <iframe
+                src={activeFile.file}
+                className="w-full h-full"
+              />
 
             </div>
           </div>
