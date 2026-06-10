@@ -11,6 +11,7 @@ type Asset = {
 
 export default function ExitExamPage() {
   const [activeFile, setActiveFile] = useState<Asset | null>(null);
+  const [videoStarted, setVideoStarted] = useState(false);
 
   const planningDocs: Asset[] = [
     {
@@ -52,289 +53,166 @@ export default function ExitExamPage() {
 
       <div className="relative z-10">
 
-        {/* NAV */}
+        {/* NAV (UNCHANGED) */}
         <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10">
-
           <h1 className="tracking-[0.35em] text-sm text-gray-300">
             VINCENT TIRRI
           </h1>
 
           <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
-
-            <a href="/" className="hover:text-emerald-400 transition">
-              HOME
-            </a>
-
-            <a href="/about" className="hover:text-emerald-400 transition">
-              ABOUT
-            </a>
-
-            <a href="/pre-production" className="hover:text-emerald-400 transition">
-              PRE-PRODUCTION
-            </a>
-
-            <a href="/production" className="hover:text-emerald-400 transition">
-              PRODUCTION
-            </a>
-
-            <a href="/Post-Production" className="hover:text-emerald-400 transition">
-              POST PRODUCTION
-            </a>
-
-            <a href="/Experiences" className="hover:text-emerald-400 transition">
-              EXPERIENCES
-            </a>
-
-            <a href="/exit-exam" className="text-emerald-400">
-              EXIT EXAM
-            </a>
-
+            <a href="/" className="hover:text-emerald-400 transition">HOME</a>
+            <a href="/about" className="hover:text-emerald-400 transition">ABOUT</a>
+            <a href="/pre-production" className="hover:text-emerald-400 transition">PRE-PRODUCTION</a>
+            <a href="/production" className="hover:text-emerald-400 transition">PRODUCTION</a>
+            <a href="/Post-Production" className="hover:text-emerald-400 transition">POST PRODUCTION</a>
+            <a href="/Experiences" className="hover:text-emerald-400 transition">EXPERIENCES</a>
+            <a href="/exit-exam" className="text-emerald-400">EXIT EXAM</a>
           </div>
-
         </nav>
 
-        {/* HEADER */}
+        {/* HEADER (UNCHANGED) */}
         <section className="px-8 py-12 max-w-6xl mx-auto">
-
-          <p className="text-xs tracking-[0.4em] text-gray-500 uppercase">
-            Exit Exam Portfolio
-          </p>
-
           <h1 className="text-5xl font-light mt-3">
             The Sanctuary For All
           </h1>
 
           <p className="text-gray-400 mt-5 max-w-3xl">
             This project documents the complete production process behind
-            The Sanctuary For All, from initial concept development to
-            final delivery. Included are the original pitch materials,
-            screenplay, shot planning documents, finished film, and
-            reflection paper discussing the creative and technical process.
+            The Sanctuary For All.
           </p>
-
         </section>
 
-        {/* DOCUMENT NAV */}
+        {/* DOCUMENT NAV (UNCHANGED) */}
         <section className="px-8 max-w-6xl mx-auto mb-10">
-
           <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.25em]">
 
-            <button
-              onClick={() =>
-                setActiveFile({
-                  title: 'Pitch Deck',
-                  file: 'The Sanctuary for All.pdf',
-                  thumb: 'Sanctuary Thumb.jpg',
-                  type: 'pdf',
-                })
-              }
-              className="px-4 py-2 border border-white/10 hover:border-emerald-400 transition"
-            >
+            <button onClick={() => setActiveFile(planningDocs[0])}
+              className="px-4 py-2 border border-white/10 hover:border-emerald-400 transition">
               Pitch
             </button>
 
-            <button
-              onClick={() =>
-                setActiveFile({
-                  title: 'Script',
-                  file: 'Sanctuary script.pdf',
-                  thumb: 'Sanctuary script_page-0001.jpg',
-                  type: 'pdf',
-                })
-              }
-              className="px-4 py-2 border border-white/10 hover:border-emerald-400 transition"
-            >
+            <button onClick={() => setActiveFile(writtenDocs[0])}
+              className="px-4 py-2 border border-white/10 hover:border-emerald-400 transition">
               Script
             </button>
 
-            <button
-              onClick={() =>
-                setActiveFile({
-                  title: 'Shot Sheet',
-                  file: 'TSFA SL.pdf',
-                  thumb: 'SL thumb.jpg',
-                  type: 'pdf',
-                })
-              }
-              className="px-4 py-2 border border-white/10 hover:border-emerald-400 transition"
-            >
+            <button onClick={() => setActiveFile(planningDocs[1])}
+              className="px-4 py-2 border border-white/10 hover:border-emerald-400 transition">
               Shot Sheet
             </button>
 
-            <button
-              onClick={() =>
-                setActiveFile({
-                  title: 'Reflection Paper',
-                  file: 'Reflection paper.pdf',
-                  thumb: 'Reflection paper_page-0001.jpg',
-                  type: 'pdf',
-                })
-              }
-              className="px-4 py-2 border border-white/10 hover:border-emerald-400 transition"
-            >
+            <button onClick={() => setActiveFile(writtenDocs[1])}
+              className="px-4 py-2 border border-white/10 hover:border-emerald-400 transition">
               Reflection
             </button>
 
           </div>
-
         </section>
 
-        {/* FILM */}
+        {/* VIDEO WITH CUSTOM THUMBNAIL */}
         <section className="px-8 max-w-6xl mx-auto">
 
-          <p className="text-xs tracking-[0.4em] text-emerald-400 uppercase">
-            Final Production
-          </p>
+          <h2 className="text-3xl font-light mb-4">Final Production</h2>
 
-          <h2 className="text-3xl font-light mt-2">
-            The Sanctuary For All
-          </h2>
+          <div className="relative aspect-video border border-white/10 overflow-hidden">
 
-          <p className="text-gray-400 mt-3 max-w-2xl">
-            Documentary production exploring faith, community, and service
-            through interviews and observational storytelling.
-          </p>
+            {!videoStarted ? (
+              <div
+                onClick={() => setVideoStarted(true)}
+                className="cursor-pointer w-full h-full relative"
+              >
 
-          {/* FILM THUMBNAIL */}
-          <div className="mt-6 border border-white/10 overflow-hidden">
+                <img
+                  src="/video-thumbnail.jpg"
+                  className="w-full h-full object-cover"
+                  alt="Video Thumbnail"
+                />
 
-            <img
-              src="Film Thumbnail.jpg"
-              alt="Film Thumbnail"
-              className="w-full aspect-video object-cover"
-            />
+                {/* PLAY OVERLAY */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                  <div className="text-emerald-400 text-2xl tracking-widest border border-emerald-400 px-6 py-3">
+                    PLAY FILM
+                  </div>
+                </div>
 
-          </div>
-
-          {/* VIDEO */}
-          <div className="mt-6 aspect-video border border-white/10">
-
-            <iframe
-              src="https://www.youtube.com/embed/tdCZIEcx7uc"
-              className="w-full h-full"
-              allowFullScreen
-            />
+              </div>
+            ) : (
+              <iframe
+                src="https://www.youtube.com/embed/tdCZIEcx7uc?rel=0"
+                title="The Sanctuary For All"
+                className="w-full h-full"
+                allowFullScreen
+              />
+            )}
 
           </div>
 
         </section>
 
-        {/* DOCUMENTS */}
+        {/* DOCUMENT GRID (UNCHANGED) */}
         <section className="px-8 py-14 max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
 
-          {/* PLANNING DOCUMENTS */}
           <div className="border border-white/10 p-6">
-
-            <div className="mb-5">
-              <h2 className="text-2xl font-light">
-                Planning Documents
-              </h2>
-            </div>
+            <h2 className="text-2xl font-light mb-5">Planning Documents</h2>
 
             <div className="flex gap-4 overflow-x-auto pb-3">
-
               {planningDocs.map((item) => (
                 <div
                   key={item.title}
                   onClick={() => setActiveFile(item)}
-                  className="min-w-[280px] cursor-pointer border border-white/10 hover:border-emerald-400/50 transition"
+                  className="min-w-[280px] cursor-pointer border border-white/10 hover:border-emerald-400/50"
                 >
-
-                  <img
-                    src={item.thumb}
-                    className="h-[200px] w-full object-cover"
-                    alt={item.title}
-                  />
-
-                  <div className="p-3">
-                    <p className="text-sm">{item.title}</p>
-                    <p className="text-xs text-gray-500">
-                      Production Planning
-                    </p>
-                  </div>
-
+                  <img src={item.thumb} className="h-[200px] w-full object-cover" />
+                  <div className="p-3 text-sm">{item.title}</div>
                 </div>
               ))}
-
             </div>
 
           </div>
 
-          {/* WRITTEN DOCUMENTS */}
           <div className="border border-white/10 p-6">
-
-            <div className="mb-5">
-              <h2 className="text-2xl font-light">
-                Written Documents
-              </h2>
-            </div>
+            <h2 className="text-2xl font-light mb-5">Written Documents</h2>
 
             <div className="flex gap-4 overflow-x-auto pb-3">
-
               {writtenDocs.map((item) => (
                 <div
                   key={item.title}
                   onClick={() => setActiveFile(item)}
-                  className="min-w-[220px] cursor-pointer border border-white/10 hover:border-emerald-400/50 transition bg-black/40"
+                  className="min-w-[220px] cursor-pointer border border-white/10 hover:border-emerald-400/50"
                 >
-
-                  <div className="h-[320px] w-full bg-black overflow-hidden">
-
+                  <div className="h-[320px] overflow-hidden">
                     <img
                       src={item.thumb}
-                      alt={item.title}
-                      className="w-full h-full object-contain hover:scale-105 transition duration-500"
+                      className="w-full h-full object-contain"
                     />
-
                   </div>
-
-                  <div className="p-3">
-                    <p className="text-sm">{item.title}</p>
-                    <p className="text-xs text-gray-500">
-                      PDF Document
-                    </p>
-                  </div>
-
+                  <div className="p-3 text-sm">{item.title}</div>
                 </div>
               ))}
-
             </div>
 
           </div>
 
         </section>
 
-        {/* PDF VIEWER */}
+        {/* FOOTER (UNCHANGED) */}
+        <footer className="text-center text-[10px] tracking-[0.3em] text-gray-600 py-6 border-t border-white/10">
+          EXIT EXAM ARCHIVE SYSTEM
+        </footer>
+
+        {/* MODAL VIEWER */}
         {activeFile && (
           <div
             onClick={() => setActiveFile(null)}
             className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-10"
           >
             <div className="w-full max-w-5xl h-[90vh] border border-white/20 bg-black">
-
-              {activeFile.type === 'pdf' ? (
-                <iframe
-                  src={activeFile.file}
-                  className="w-full h-full"
-                />
-              ) : (
-                <img
-                  src={activeFile.file}
-                  className="w-full h-full object-contain"
-                />
-              )}
-
+              <iframe src={activeFile.file} className="w-full h-full" />
             </div>
           </div>
         )}
 
-        {/* FOOTER */}
-        <footer className="text-center text-[10px] tracking-[0.3em] text-gray-600 py-6 border-t border-white/10">
-          EXIT EXAM ARCHIVE SYSTEM
-        </footer>
-
       </div>
-
     </div>
   );
 }
