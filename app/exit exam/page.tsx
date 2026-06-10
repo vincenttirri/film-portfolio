@@ -114,6 +114,71 @@ export default function ExitExamPage() {
 
         </section>
 
+        {/* DOCUMENT NAV */}
+        <section className="px-8 max-w-6xl mx-auto mb-10">
+
+          <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.25em]">
+
+            <button
+              onClick={() =>
+                setActiveFile({
+                  title: 'Pitch Deck',
+                  file: 'The Sanctuary for All.pdf',
+                  thumb: 'Sanctuary Thumb.jpg',
+                  type: 'pdf',
+                })
+              }
+              className="px-4 py-2 border border-white/10 hover:border-emerald-400 transition"
+            >
+              Pitch
+            </button>
+
+            <button
+              onClick={() =>
+                setActiveFile({
+                  title: 'Script',
+                  file: 'Sanctuary script.pdf',
+                  thumb: 'Sanctuary script_page-0001.jpg',
+                  type: 'pdf',
+                })
+              }
+              className="px-4 py-2 border border-white/10 hover:border-emerald-400 transition"
+            >
+              Script
+            </button>
+
+            <button
+              onClick={() =>
+                setActiveFile({
+                  title: 'Shot Sheet',
+                  file: 'TSFA SL.pdf',
+                  thumb: 'SL thumb.jpg',
+                  type: 'pdf',
+                })
+              }
+              className="px-4 py-2 border border-white/10 hover:border-emerald-400 transition"
+            >
+              Shot Sheet
+            </button>
+
+            <button
+              onClick={() =>
+                setActiveFile({
+                  title: 'Reflection Paper',
+                  file: 'Reflection paper.pdf',
+                  thumb: 'Reflection paper_page-0001.jpg',
+                  type: 'pdf',
+                })
+              }
+              className="px-4 py-2 border border-white/10 hover:border-emerald-400 transition"
+            >
+              Reflection
+            </button>
+
+          </div>
+
+        </section>
+
         {/* FILM */}
         <section className="px-8 max-w-6xl mx-auto">
 
@@ -130,12 +195,26 @@ export default function ExitExamPage() {
             through interviews and observational storytelling.
           </p>
 
+          {/* FILM THUMBNAIL */}
+          <div className="mt-6 border border-white/10 overflow-hidden">
+
+            <img
+              src="Film Thumbnail.jpg"
+              alt="Film Thumbnail"
+              className="w-full aspect-video object-cover"
+            />
+
+          </div>
+
+          {/* VIDEO */}
           <div className="mt-6 aspect-video border border-white/10">
+
             <iframe
               src="https://www.youtube.com/embed/tdCZIEcx7uc"
               className="w-full h-full"
               allowFullScreen
             />
+
           </div>
 
         </section>
@@ -143,7 +222,7 @@ export default function ExitExamPage() {
         {/* DOCUMENTS */}
         <section className="px-8 py-14 max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
 
-          {/* PLANNING */}
+          {/* PLANNING DOCUMENTS */}
           <div className="border border-white/10 p-6">
 
             <div className="mb-5">
@@ -181,7 +260,7 @@ export default function ExitExamPage() {
 
           </div>
 
-          {/* WRITTEN */}
+          {/* WRITTEN DOCUMENTS */}
           <div className="border border-white/10 p-6">
 
             <div className="mb-5">
