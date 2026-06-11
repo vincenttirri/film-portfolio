@@ -155,7 +155,7 @@ export default function PreProductionPage() {
               EXPERIENCES
             </a>
 
-            <a href="/exit-exam" className="hover:text-emerald-400 transition">
+            <a href="/exit exam" className="hover:text-emerald-400 transition">
               EXIT EXAM
             </a>
 
