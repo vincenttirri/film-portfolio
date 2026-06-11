@@ -85,7 +85,7 @@ export default function PreProductionPage() {
     {
       title: "RADIOWORLD",
       file: "RW SL.pdf",
-      thumb: "RW SL_page-0001.jpg",
+      thumb: "RW SL_pages-to-jpg-0001.jpg",
       type: "pdf"
     },
     {
@@ -291,29 +291,27 @@ export default function PreProductionPage() {
           <div className="border border-white/10 p-6">
 
             <h2 className="text-2xl font-light mb-5">
-              Cast & Crew Sheets
+              Cast & Crew
             </h2>
 
             <div className="flex gap-4 overflow-x-auto pb-3">
 
-              {castCrew.map((item) => (
+              {shotSheets.map((item) => (
                 <div
                   key={item.title}
                   onClick={() => setActiveFile(item)}
-                  className="min-w-[220px] cursor-pointer border border-white/10 hover:border-emerald-400/50 transition bg-black/40"
+                  className="min-w-[280px] cursor-pointer border border-white/10 hover:border-emerald-400/50 transition"
                 >
 
-                  <div className="h-[320px] overflow-hidden">
-                    <img
-                      src={item.thumb}
-                      alt={item.title}
-                      className="w-full h-full object-contain hover:scale-105 transition duration-500"
-                    />
-                  </div>
+                  <img
+                    src={item.thumb}
+                    className="h-[200px] w-full object-cover"
+                    alt={item.title}
+                  />
 
                   <div className="p-3">
                     <p className="text-sm">{item.title}</p>
-                    <p className="text-xs text-gray-500">Production Crew</p>
+                    <p className="text-xs text-gray-500">Crew list</p>
                   </div>
 
                 </div>
