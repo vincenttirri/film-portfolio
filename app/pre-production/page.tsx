@@ -296,7 +296,7 @@ export default function PreProductionPage() {
 
             <div className="flex gap-4 overflow-x-auto pb-3">
 
-              {shotSheets.map((item) => (
+              {castCrew.map((item) => (
                 <div
                   key={item.title}
                   onClick={() => setActiveFile(item)}
