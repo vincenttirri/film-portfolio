@@ -78,14 +78,14 @@ export default function PreProductionPage() {
   const shotSheets: Asset[] = [
     {
       title: "Everything Above",
-      file: "Everything Above Shot Sheet.pdf",
-      thumb: "Everything Above SS Thumb.jpg",
+      file: "EA SL.pdf",
+      thumb: "EA SL_page-0001.jpg",
       type: "pdf"
     },
     {
       title: "RADIOWORLD",
-      file: "RADIOWORLD Shot Sheet.pdf",
-      thumb: "RADIOWORLD SS Thumb.jpg",
+      file: "RW SL.pdf",
+      thumb: "RW SL_page-0001.jpg",
       type: "pdf"
     },
     {
@@ -100,14 +100,14 @@ export default function PreProductionPage() {
   const castCrew: Asset[] = [
     {
       title: "RADIOWORLD",
-      file: "RADIOWORLD Cast Crew.pdf",
-      thumb: "RADIOWORLD CC Thumb.jpg",
+      file: "RW CCS.pdf",
+      thumb: "RW CCS_page-0001.jpg",
       type: "pdf"
     },
     {
-      title: "The Sanctuary for All",
-      file: "TSFA Cast Crew.pdf",
-      thumb: "TSFA CC Thumb.jpg",
+      title: "Everything Above",
+      file: "EA CCS.docx.pdf",
+      thumb: "EA CCS.docx_page-0001.jpg",
       type: "pdf"
     },
   ];
