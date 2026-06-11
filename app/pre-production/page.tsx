@@ -33,7 +33,7 @@ export default function PreProductionPage() {
       type: "pdf"
     },
     {
-      title: "Once in time, Now in space",
+      title: "Once in Time, Now in Space",
       file: "Once in time, Now in space.pdf",
       thumb: "Nasa Hunch Thumb.jpg",
       type: "pdf"
@@ -61,7 +61,7 @@ export default function PreProductionPage() {
       type: "pdf"
     },
     {
-      title: "Once in time, Now in space",
+      title: "Once in Time, Now in Space",
       file: "Nasa script.pdf",
       thumb: "Nasa script_page-0001.jpg",
       type: "pdf"
@@ -74,55 +74,98 @@ export default function PreProductionPage() {
     },
   ];
 
+  // ================= SHOT SHEETS =================
+  const shotSheets: Asset[] = [
+    {
+      title: "Everything Above",
+      file: "Everything Above Shot Sheet.pdf",
+      thumb: "Everything Above SS Thumb.jpg",
+      type: "pdf"
+    },
+    {
+      title: "RADIOWORLD",
+      file: "RADIOWORLD Shot Sheet.pdf",
+      thumb: "RADIOWORLD SS Thumb.jpg",
+      type: "pdf"
+    },
+    {
+      title: "The Sanctuary for All",
+      file: "TSFA SL.pdf",
+      thumb: "SL thumb.jpg",
+      type: "pdf"
+    },
+  ];
+
+  // ================= CAST & CREW =================
+  const castCrew: Asset[] = [
+    {
+      title: "RADIOWORLD",
+      file: "RADIOWORLD Cast Crew.pdf",
+      thumb: "RADIOWORLD CC Thumb.jpg",
+      type: "pdf"
+    },
+    {
+      title: "The Sanctuary for All",
+      file: "TSFA Cast Crew.pdf",
+      thumb: "TSFA CC Thumb.jpg",
+      type: "pdf"
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-black text-white font-sans relative overflow-hidden">
 
-      {/* CINEMATIC BACKGROUND */}
+      {/* BACKGROUND */}
       <div className="fixed inset-0 bg-black" />
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.10),transparent_60%)] pointer-events-none" />
       <div className="fixed inset-0 opacity-[0.05] bg-[url('https://www.transparenttextures.com/patterns/noise.png')]" />
 
       <div className="relative z-10">
 
-       {/* NAV */}
-<nav className="flex justify-between items-center px-8 py-6 border-b border-white/10 relative z-20">
-  <h1 className="tracking-[0.35em] text-sm text-gray-300">
-    VINCENT TIRRI
-  </h1>
+        {/* NAV */}
+        <nav className="flex justify-between items-center px-8 py-6 border-b border-white/10">
 
-  <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
-    <a href="/" className="hover:text-emerald-400 transition">
-      HOME
-    </a>
+          <h1 className="tracking-[0.35em] text-sm text-gray-300">
+            VINCENT TIRRI
+          </h1>
 
-    <a href="/about" className="hover:text-emerald-400 transition">
-      ABOUT
-    </a>
+          <div className="flex gap-8 text-sm uppercase tracking-widest text-gray-400">
 
-    <a href="/pre-production" className="hover:text-emerald-400 transition">
-      PRE-PRODUCTION
-    </a>
+            <a href="/" className="hover:text-emerald-400 transition">
+              HOME
+            </a>
 
-    <a href="/production" className="hover:text-emerald-400 transition">
-      PRODUCTION
-    </a>
+            <a href="/about" className="hover:text-emerald-400 transition">
+              ABOUT
+            </a>
 
-    <a href="/Post-Production" className="hover:text-emerald-400 transition">
-      POST PRODUCTION
-    </a>
+            <a href="/pre-production" className="text-emerald-400">
+              PRE-PRODUCTION
+            </a>
 
-    <a href="/Experiences" className="hover:text-emerald-400 transition">
-      EXPERIENCES
-    </a>
+            <a href="/production" className="hover:text-emerald-400 transition">
+              PRODUCTION
+            </a>
 
-    <a href="/exit exam" className="hover:text-emerald-400 transition">
-      EXIT EXAM
-    </a>
-  </div>
-</nav>
+            <a href="/Post-Production" className="hover:text-emerald-400 transition">
+              POST PRODUCTION
+            </a>
+
+            <a href="/Experiences" className="hover:text-emerald-400 transition">
+              EXPERIENCES
+            </a>
+
+            <a href="/exit-exam" className="hover:text-emerald-400 transition">
+              EXIT EXAM
+            </a>
+
+          </div>
+
+        </nav>
 
         {/* HEADER */}
         <section className="px-8 py-12 max-w-6xl mx-auto">
+
           <p className="text-xs tracking-[0.4em] text-gray-500 uppercase">
             Studio Archive System
           </p>
@@ -132,19 +175,21 @@ export default function PreProductionPage() {
           </h1>
 
           <p className="text-gray-400 mt-5 max-w-2xl">
-            Structured archive of pitch decks, scripts, and development documents used in production workflows.
+            Structured archive of pitch decks, scripts, shot planning documents,
+            and cast & crew paperwork used throughout production workflows.
           </p>
+
         </section>
 
         {/* GRID */}
         <section className="px-8 pb-20 max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
 
-          {/* ================= PITCHES (UNCHANGED) ================= */}
+          {/* PITCHES */}
           <div className="border border-white/10 p-6">
 
-            <div className="mb-5">
-              <h2 className="text-2xl font-light">Pitch Decks</h2>
-            </div>
+            <h2 className="text-2xl font-light mb-5">
+              Pitch Decks
+            </h2>
 
             <div className="flex gap-4 overflow-x-auto pb-3">
 
@@ -164,6 +209,7 @@ export default function PreProductionPage() {
                     <p className="text-sm">{item.title}</p>
                     <p className="text-xs text-gray-500">Pitch Document</p>
                   </div>
+
                 </div>
               ))}
 
@@ -171,45 +217,111 @@ export default function PreProductionPage() {
 
           </div>
 
-          {/* ================= SCRIPTS ================= */}
-<div className="border border-white/10 p-6">
+          {/* SCRIPTS */}
+          <div className="border border-white/10 p-6">
 
-  <div className="mb-5">
-    <h2 className="text-2xl font-light">Scripts</h2>
-  </div>
+            <h2 className="text-2xl font-light mb-5">
+              Scripts
+            </h2>
 
-  {/* HORIZONTAL SCROLL (PORTRAIT CARDS) */}
-  <div className="flex gap-4 overflow-x-auto pb-3">
+            <div className="flex gap-4 overflow-x-auto pb-3">
 
-    {scripts.map((item) => (
-      <div
-        key={item.title}
-        onClick={() => setActiveFile(item)}
-        className="min-w-[220px] cursor-pointer border border-white/10 hover:border-emerald-400/50 transition bg-black/40"
-      >
+              {scripts.map((item) => (
+                <div
+                  key={item.title}
+                  onClick={() => setActiveFile(item)}
+                  className="min-w-[220px] cursor-pointer border border-white/10 hover:border-emerald-400/50 transition bg-black/40"
+                >
 
-        {/* PORTRAIT THUMBNAIL */}
-        <div className="h-[320px] w-full bg-black overflow-hidden">
-          <img
-            src={item.thumb}
-            alt={item.title}
-            className="w-full h-full object-contain hover:scale-105 transition duration-500"
-            loading="lazy"
-          />
-        </div>
+                  <div className="h-[320px] overflow-hidden">
+                    <img
+                      src={item.thumb}
+                      alt={item.title}
+                      className="w-full h-full object-contain hover:scale-105 transition duration-500"
+                    />
+                  </div>
 
-        {/* TEXT */}
-        <div className="p-3">
-          <p className="text-sm">{item.title}</p>
-          <p className="text-xs text-gray-500">Screenplay</p>
-        </div>
+                  <div className="p-3">
+                    <p className="text-sm">{item.title}</p>
+                    <p className="text-xs text-gray-500">Screenplay</p>
+                  </div>
 
-      </div>
-    ))}
+                </div>
+              ))}
 
-  </div>
+            </div>
 
-</div>
+          </div>
+
+          {/* SHOT SHEETS */}
+          <div className="border border-white/10 p-6">
+
+            <h2 className="text-2xl font-light mb-5">
+              Shot Sheets
+            </h2>
+
+            <div className="flex gap-4 overflow-x-auto pb-3">
+
+              {shotSheets.map((item) => (
+                <div
+                  key={item.title}
+                  onClick={() => setActiveFile(item)}
+                  className="min-w-[280px] cursor-pointer border border-white/10 hover:border-emerald-400/50 transition"
+                >
+
+                  <img
+                    src={item.thumb}
+                    className="h-[200px] w-full object-cover"
+                    alt={item.title}
+                  />
+
+                  <div className="p-3">
+                    <p className="text-sm">{item.title}</p>
+                    <p className="text-xs text-gray-500">Shot Planning</p>
+                  </div>
+
+                </div>
+              ))}
+
+            </div>
+
+          </div>
+
+          {/* CAST & CREW */}
+          <div className="border border-white/10 p-6">
+
+            <h2 className="text-2xl font-light mb-5">
+              Cast & Crew Sheets
+            </h2>
+
+            <div className="flex gap-4 overflow-x-auto pb-3">
+
+              {castCrew.map((item) => (
+                <div
+                  key={item.title}
+                  onClick={() => setActiveFile(item)}
+                  className="min-w-[220px] cursor-pointer border border-white/10 hover:border-emerald-400/50 transition bg-black/40"
+                >
+
+                  <div className="h-[320px] overflow-hidden">
+                    <img
+                      src={item.thumb}
+                      alt={item.title}
+                      className="w-full h-full object-contain hover:scale-105 transition duration-500"
+                    />
+                  </div>
+
+                  <div className="p-3">
+                    <p className="text-sm">{item.title}</p>
+                    <p className="text-xs text-gray-500">Production Crew</p>
+                  </div>
+
+                </div>
+              ))}
+
+            </div>
+
+          </div>
 
         </section>
 
@@ -221,17 +333,10 @@ export default function PreProductionPage() {
           >
             <div className="w-full max-w-5xl h-[90vh] border border-white/20 bg-black">
 
-              {activeFile.type === 'pdf' ? (
-                <iframe
-                  src={activeFile.file}
-                  className="w-full h-full"
-                />
-              ) : (
-                <img
-                  src={activeFile.file}
-                  className="w-full h-full object-contain"
-                />
-              )}
+              <iframe
+                src={activeFile.file}
+                className="w-full h-full"
+              />
 
             </div>
           </div>
@@ -239,10 +344,11 @@ export default function PreProductionPage() {
 
         {/* FOOTER */}
         <footer className="text-center text-[10px] tracking-[0.3em] text-gray-600 py-6 border-t border-white/10">
-          PRODUCTION ARCHIVE SYSTEM
+          PRE-PRODUCTION ARCHIVE SYSTEM
         </footer>
 
       </div>
+
     </div>
   );
 }
